@@ -1,0 +1,138 @@
+/* *{
+    outline: 1px solid red;
+} */
+
+.wrapper{    
+    width: 100vw;
+    max-width:100%;
+    min-width: 1440px;
+    background-color: #fff;
+}
+
+
+/* bread_crumbs */
+.bread_crumbs{
+    max-width: 1440px;
+    margin: 0 auto;
+    line-height: 45px;
+    background-color: #EEEFE9;
+    font-weight: 500;
+    display: flex;
+    padding-left: 25px;
+}
+
+.bread_crumbs h1::after{
+    content: '／';
+}
+
+/* bread_crumbs end */
+
+/* main_area */
+
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 20px;
+}
+
+/* left_block */
+
+.left_block{
+    flex-basis: 550px;
+    padding: 30px 70px 0 70px;
+}
+
+.left_block ul li{
+    position: relative;
+    padding-bottom: 15px;
+}
+
+
+.left_block ul li a{
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.left_block ul li a:hover{
+    color: #E4B67A;
+}
+
+.left_block ul li i{
+    position: absolute;
+    top: 5px;
+    right: -30px;
+}
+
+/* left_block end */
+
+/* product_block */
+
+.product_block{
+    padding-top: 30px;
+}
+
+.product_block ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.product_block ul li{
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+
+.product_block ul li a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    position: relative;
+    font-weight: 550;
+}
+
+.product_block ul li a:hover{
+    color: #E4B67A;
+}
+
+.product_block ul li a:hover img{
+    filter: brightness(.5);
+}
+
+
+.product_block ul li a, a:link, a:visited{
+    color: #000;
+    text-decoration: none;
+}
+
+.product_block ul li a h3{
+    padding-top: 5px 0;
+}
+
+/* product_block end */
+
+
+.page_number{
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 90px 80px 0;
+}
+.page_number a{
+    padding: 0 5px;
+}
+
+.page_number a:hover{
+    color: #E4B67A;
+}
+
+.page_number #page1{
+    border-bottom: 2px solid #E4B67A;
+    border-bottom-color: #E4B67A;
+    color: #E4B67A;
+}

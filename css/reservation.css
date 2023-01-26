@@ -1,0 +1,297 @@
+/* *{
+    outline: 1px solid red;
+} */
+
+.wrapper{    
+    width: 100vw;
+    max-width:100%; 
+    min-width: 1440px;
+}
+
+/* banner_area */
+
+.banner img{
+    display: block;
+    width: 100%;
+}
+
+/* banner_area end */
+
+/* main_area */
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+/*----- reservation_bar -----*/
+
+.reservation_bar{
+    width: 1000px;
+    margin: 70px auto;
+    background-color: #fff;
+
+    display: flex;
+}
+.reservation_bar img{
+    display: block;
+}
+.reservation_bar p{
+    flex-grow: 3;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 56px 0 56px 40px;
+    letter-spacing: 4px;
+}
+.reservation_bar .button{
+    flex-grow: 1;
+}
+.reservation_bar .button button{
+    width: 160px;
+    line-height: 50px;
+    padding: 0px;
+    margin: 45px 0px 45px 150px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: #194448;
+    color: white;
+}
+
+
+/* reservation_bar_taipei */
+
+.reservation_bar_taipei{
+    width: 1000px;
+    margin: 70px auto;
+    background-color: #fff;
+
+    display: flex;
+}
+
+.reservation_bar_taipei img{
+    display: block;
+}
+.reservation_bar_taipei p{
+    flex-grow: 3;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 56px 0 56px 40px;
+    letter-spacing: 4px;
+}
+.reservation_bar_taipei .button{
+    flex-grow: 1;
+}
+.reservation_bar_taipei .button button{
+    width: 160px;
+    line-height: 50px;
+    padding: 0px;
+    margin: 45px 0px 45px 150px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: #194448;
+    color: white;
+}
+
+.reservation_bar_taipei_active{
+    display: none;
+}
+
+/*----- reservation_bar end -----*/
+
+/*----- choose_date -----*/
+
+.choose_date{
+    display: none;
+}
+.choose_date_active{
+    position: relative;
+    padding: 70px 0;
+
+    display: block;
+}
+
+.choose_date h1{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 4px solid #E4B67A;
+
+    position: absolute;
+    top: 0;
+    left: 220px;
+}
+
+/* calendar_block */
+
+.calendar{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.month {
+    padding: 30px 50px;
+    background: white;
+}
+
+.month ul li {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align:center
+}
+
+.month .prev {
+    float: left;
+    font-size: 20px;
+}
+
+.month .next {
+    float: right;
+    font-size: 20px;
+}
+
+.weekdays {
+    padding: 10px 0;
+    background-color: #ccc;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+    font-size: 18px;
+}
+
+.days {
+    padding: 20px 0;
+    background: white;
+}
+
+.days li {
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 15px;
+    color: black;
+    font-size: 18px;
+}
+
+.days li .active {
+    background: #194448;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    width: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+}
+
+/* calendar_block end */
+/*----- choose_date end-----*/
+
+
+/*----- choose_time -----*/
+.choose_time{
+    display: none;
+}
+
+.choose_time_active{
+    padding: 70px 0 0 200px;
+    position: relative;
+
+    display: block;
+    display: flex;
+}
+
+.choose_time h1{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 4px solid #E4B67A;
+
+    position: absolute;
+    top: 0;
+    left: 220px;
+}
+
+.choose_time .time{
+    width: 115px;
+    line-height: 35px;
+    background-color: #F1D6B2;
+    text-align: center;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.choose_time .time:hover{
+    background-color: #194448;
+    color: white;
+}
+
+/*----- choose_time end-----*/
+
+/*----- information -----*/
+
+.information{
+    display: none;
+}
+
+.information_active{
+    padding: 70px 0 0 0px;
+    width: 1000px;
+    margin: 70px auto;
+    position: relative;
+
+    display: block;
+}
+
+.information h1{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 4px solid #E4B67A;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.information .map{
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.information .map img{
+    display: block;
+    float: left;
+    padding: 40px 70px 40px 50px;
+}
+
+.information .map p{
+    padding-top: 30px;
+    line-height: 3;
+    font-weight: 600;
+}
+
+.information button{
+    width: 160px;
+    line-height: 50px;
+    padding: 0px;
+    margin: 45px 0px 45px 420px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: #194448;
+    color: white;
+}
+/*----- information end -----*/
+
+/* main_area end */

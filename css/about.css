@@ -1,0 +1,173 @@
+/* *{
+    outline: 1px solid red;
+} */
+
+.wrapper{    
+    width: 100vw;
+    max-width:100%; 
+    min-width: 1440px;
+}
+
+/* banner_area */
+
+.banner{
+    position: relative;
+}
+
+.banner img{
+    display: block;
+    width: 100%;
+}
+.banner h1{
+    font-size: 80px;
+    color: #194448;
+    font-weight: 540;
+    position: absolute;
+    z-index: 30;
+    top: 150px;
+    left: 300px;
+}
+/* banner_area end */
+
+/* main_area */
+
+/* section_top */
+
+main .top{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+main .top h2{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 60px 0 50px;
+    color: #194448;
+}
+
+main .top p{
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 50px;
+    line-height: 3;
+    font-weight: 600;
+}
+
+/* section_top end */
+
+/* section_bottom */
+
+main .bottom{
+    width: 100%;
+    padding: 0 230px;
+    background-color: #194448;
+}
+
+main .bottom h2{
+    font-size: 20px;
+    font-weight: 550;
+    text-align: center;
+    padding: 70px 0;
+    color: #fff;
+}
+
+main .bottom ul{
+    display: flex;
+    padding: 0 70px 200px;
+}
+
+main .bottom ul li{
+    flex-grow: 1;
+    flex-basis: 300px;
+    color: #fff;
+
+    position: relative;
+}
+
+
+main .bottom .img{
+    max-width: 330px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+
+main .bottom .img img{
+    display: block;
+    width: 100%;
+    transition: all 0.3s linear;
+}
+
+main .bottom .img img:hover{
+    transform: scale(1.1);
+    filter: opacity(.5);
+    filter:brightness(1.2);
+}
+
+main .bottom .number{
+    display: flex;
+}
+
+main .bottom .number h3{
+    flex-grow: 1;
+    text-align: right;
+    font-size: 60px;
+    font-weight: 600;
+    padding-left: 30px;
+}
+
+main .bottom .number h4{
+    flex-grow: 1;
+    align-self: center;
+    font-weight: 550;
+    font-size: 22px;
+    margin: 25px 0 0 10px;
+}
+
+main .bottom ul li p{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+main .bottom .left::before{
+    content: '';
+    display: block;
+    width: 350px;
+    height: 3px;
+    background-color: #fff;
+
+    position: absolute;
+    top: 420px;
+    left: 40px;
+}
+
+main .bottom .center::before{
+    content: '';
+    display: block;
+    width: 350px;
+    height: 3px;
+    background-color: #fff;
+
+    position: absolute;
+    top: 420px;
+    left: 40px;
+}
+
+main .bottom .right::before{
+    content: '';
+    display: block;
+    width: 350px;
+    height: 3px;
+    background-color: #fff;
+
+    position: absolute;
+    top: 420px;
+    left: 42px;
+}
+
+/* section_bottom end */
+
