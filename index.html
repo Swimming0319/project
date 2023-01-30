@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/all.css">
     <!-- FontAwesome CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/liberation-serif" rel="stylesheet">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <title>睏飽未</title>
 </head>
@@ -78,7 +80,7 @@
             <!-- news_area -->
             <div class="news_area">
 
-                <div class="newsimg">
+                <div class="newsimg" data-aos="fade-right" data-aos-duration="2000">
 
                     <img src="img/index/news_1.jpg" alt="" class="img_bottom">
                     <img src="img/index/news_2.jpg" alt="" class="img_center">
@@ -86,9 +88,10 @@
 
                 </div>
 
-                <div class="news_right">
+                
+                <div class="news_right" data-aos="fade-left" data-aos-duration="2000">
 
-                    <h1>News</h1>
+                    <h1 >News</h1>
                     <h2>／最新消息</h2>
                     <div class="swiper">
                         <div class="swiper-wrapper">
@@ -159,16 +162,16 @@
             <!-- news_area end-->
 
             <!-- about_area -->
-            <div class="about_area">
+            <div class="about_area" data-aos="fade-up" data-aos-duration="2000">
 
                 <div class="about_left">
 
                     <h1>About</h1>
                     <h2>／關於我們</h2>
-                    <img src="img/index/about.jpg" alt="">
+                    <img src="img/index/about.jpg" alt="" data-aos="fade-right" data-aos-duration="2000">
 
                 </div>
-                <div class="about_right">
+                <div class="about_right" data-aos="fade-left"  data-aos-duration="3000">
 
                     <div class="top"></div>
                     <p>
@@ -184,7 +187,7 @@
             <!-- about_area end-->
 
             <!-- bestsell_area -->
-            <div class="bestsell_area">
+            <div class="bestsell_area" data-aos="fade-up" data-aos-duration="3000">
 
                 <div class="top_block">
                     <h1>Bestsellers</h1>
@@ -271,8 +274,11 @@
     </div>
     <!-- wrapper end -->
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script>
+        AOS.init();
+
         var mySwiper = new Swiper ('.swiper', {
             loop: true, // 循環模式選項
             autoplay: true,

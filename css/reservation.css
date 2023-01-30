@@ -269,8 +269,8 @@ main{
     overflow: hidden;
 }
 
-.information .map img{
-    display: block;
+.information .map iframe{
+    width: 500px;
     float: left;
     padding: 40px 70px 40px 50px;
 }

@@ -78,15 +78,33 @@
                     <li><a href="#">所有商品</a></li>
                     <li><a href="#">✨新品上市</a></li>
                     <li>
-                        <a href="#">躺的</a>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </li>
-                    <li><a href="#">穿的</a>
-                        <i class="fa-solid fa-angle-down"></i>
+                        <button class="dropdown-btn">躺的 
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#" class="dropdown-text">好睏雙人</a><br>
+                            <a href="#" class="dropdown-text">好睏單人</a><br>
+                            <a href="#" class="dropdown-text">好睏厚墊</a><br>
+                            <a href="#" class="dropdown-text">好睏薄墊</a>
+                        </div>    
                     </li>
                     <li>
-                        <a href="#">用的</a>
-                        <i class="fa-solid fa-angle-down"></i>
+                        <button class="dropdown-btn">穿的 
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#" class="dropdown-text">男款</a><br>
+                            <a href="#" class="dropdown-text">女款</a>
+                        </div>    
+                    </li>
+                    <li>
+                        <button class="dropdown-btn">用的 
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+                            <a href="#" class="dropdown-text">香氛蠟燭</a><br>
+                            <a href="#" class="dropdown-text">擴香精油</a><br>
+                        </div>    
                     </li>
                 </ul>
             </section>
@@ -104,56 +122,56 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="product_detail.html">
                             <img src="img/products/2.png" alt="">
                             <h3>科技款好睏床墊</h3>
                             <p>NT$35,000</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="product_detail.html">
                             <img src="img/products/3.png" alt="">
                             <h3>熱感好睏床墊</h3>
                             <p>NT$26,000</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="product_detail.html">
                             <img src="img/products/4.png" alt="">
                             <h3>彈力款好睏床墊</h3>
                             <p>NT$27,000</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="product_detail.html">
                             <img src="img/products/5.png" alt="">
                             <h3>涼款好睏床墊</h3>
                             <p>NT$27,000</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="product_detail.html">
                             <img src="img/products/6.png" alt="">
                             <h3>好睏枕</h3>
                             <p>NT$1,200</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="product_detail.html">
                             <img src="img/products/7.png" alt="">
                             <h3>睏衣(春秋款)</h3>
                             <p>NT$799</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="product_detail.html">
                             <img src="img/products/8.png" alt="">
                             <h3>睏衣(冬款)</h3>
                             <p>NT$899</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="product_detail.html">
                             <img src="img/products/9.png" alt="">
                             <h3>好睏擴香</h3>
                             <p>NT$599</p>
@@ -220,6 +238,23 @@
 
     </div>
     <!-- wrapper end -->
+
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+        });
+        }
+    </script>
 
 
 </body>

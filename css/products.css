@@ -56,9 +56,35 @@ main{
     font-size: 18px;
 }
 
-.left_block ul li a:hover{
+.left_block ul li a:hover, .dropdown-btn:hover{
     color: #E4B67A;
 }
+
+.left_block .dropdown-btn{
+    width: 150px;
+    font-size: 18px;
+    font-family: "Noto Sans TC";
+    font-weight: 600;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.left_block .dropdown-container{
+    display: none;
+    padding-left: 8px;
+    padding-top: 10px;
+}
+
+.left_block ul li .dropdown-container .dropdown-text{
+    color: #999999;
+}
+
+.left_block ul li .dropdown-container .dropdown-text:hover{
+    color: #E4B67A;
+}
+
 
 .left_block ul li i{
     position: absolute;
