@@ -1,6 +1,6 @@
-*{
+/* *{
     outline: 1px solid red;
-}
+} */
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 html {
@@ -24,7 +24,6 @@ html {
 .banner img{
     display: block;
     width: 100%;
-    
 }
 
 .banner p{
@@ -42,7 +41,7 @@ html {
     bottom: 0;
     margin: auto;
     height: 33%;
-    width: 32%;
+    width: 31%;
 
     animation: sleep 1.2s linear backwards;
 }
@@ -85,12 +84,8 @@ html {
 /* bannerArea end */
 
 /* main_area */
-/* news_area */
 
-.main{
-    width: 100%;
-    min-width: 1440px;
-}
+/* news_area */
 
 .news_area{
     max-width: 1440px;
@@ -181,9 +176,6 @@ html {
     transition: 1s;
 } */
 
-.swiper{
-    width: 860px;
-}
 
 .news_right{
     padding-top: 80px;
@@ -277,26 +269,38 @@ html {
     font-weight: 550;
 }
 
-.arrow_button{
-    padding-top: 40px;
-    display: flex;
+/* swiper */
+
+.swiper{
+    width: 860px;
 }
 
-.arrow_button a{
-    margin-right: 2px;
+.arrow_button{
+    padding-top: 30px;
+}
+.arrow_button_next{
+    display: inline-block;
     width: 40px;
     line-height: 40px;
-    background: #fff;
-    color: #fff;
-    font-size: 25px;
-    text-align: center;
     background-color: #A4A1A1;
+    text-align: center;
+    color: white;
+    font-size: 28px;
 }
 
-.arrow_button a:hover{
+.arrow_button_prev{
+    display: inline-block;
+    width: 40px;
+    line-height: 40px;
+    background-color: #A4A1A1;
+    text-align: center;
+    color: white;
+    font-size: 28px;
+}
+
+.arrow_button_next:hover, .arrow_button_prev:hover{
     background-color: #194448;
 }
-
 
 /* news_area end */
 
@@ -312,7 +316,7 @@ html {
 .about_wrapper{
     /* min-width: 1440px; */
     display: flex;
-    width: 90%;
+    width: 76%;
     margin: 0 auto;
 }
 

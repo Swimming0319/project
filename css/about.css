@@ -11,6 +11,7 @@
 header nav .now_page{
     color: #E4B67A;
 }
+
 /* banner_area */
 
 .banner{
@@ -46,6 +47,7 @@ header nav .now_page{
 /* section_top */
 
 main .top{
+    width: 100%;
     min-width: 1440px;
     padding: 30px 0;
 }
@@ -71,13 +73,15 @@ main .top p{
 /* section_bottom */
 
 main .bottom{
-    width: 100%;
-    padding: 0 230px;
+    /* width: 100%; */
+    min-width: 1440px;
+    /* padding: 0 230px; */
     background-color: #194448;
 }
 
 main .bottom_wrapper{
-    min-width: 1440px;
+    width: 76%;
+    margin: 0 auto;
 }
 
 main .bottom h2{
@@ -86,13 +90,11 @@ main .bottom h2{
     text-align: center;
     padding: 70px 0;
     color: #fff;
-    min-width: 1440px;
 }
 
 main .bottom ul{
     display: flex;
     padding: 0 70px 200px;
-    min-width: 1440px;
 }
 
 main .bottom ul li{

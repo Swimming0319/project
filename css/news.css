@@ -15,8 +15,10 @@ header nav .now_page{
 /* title */
 
 .title{
-    max-width: 1440px;
-    margin: 0 auto;
+    /* max-width: 1440px;
+    margin: 0 auto; */
+    width: 100%;
+    min-width: 1440px;
     padding: 30px 0 50px;
 }
 

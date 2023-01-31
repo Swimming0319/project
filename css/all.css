@@ -17,8 +17,6 @@ body{
 
 header{
     background-color: #fff;
-    overflow: hidden;
-    /* padding: 0 230px; */
     min-width: 1440px;
 }
 
@@ -33,8 +31,6 @@ header{
     display: block;
     max-width: 280px;
     padding: 10px 30px;
-
- 
 }
 
 nav ul{
@@ -42,8 +38,6 @@ nav ul{
 }
 
 nav ul li{
-    display: flex;
-    
     margin-right: 30px;
 }
 
