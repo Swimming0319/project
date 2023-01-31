@@ -1,6 +1,7 @@
 /* *{
     outline: 1px solid red;
 } */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 .wrapper{    
     width: 100vw;
@@ -17,7 +18,8 @@
 }
 
 .title h1{
-    font-size: 80px;
+    font-size: 72px;
+    font-family: 'Lora', serif;
     color: #E4B67A;
     text-align: center;
 }

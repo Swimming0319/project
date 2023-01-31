@@ -1,6 +1,7 @@
 /* *{
     outline: 1px solid red;
 } */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -32,17 +33,24 @@ html {
     color: white;
     position: absolute;
     z-index: 30;
-    top: 300px;
-    left: 310px;
+    display: flex;
+    align-items: start;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    height: 33%;
+    width: 32%;
 
     animation: sleep 1.2s linear backwards;
 }
 @keyframes sleep{
     0%{
-        left: 0; opacity: 0;
+        left: -100px; opacity: 0;
     }
     100%{
-        left: 310px; opacity: 1;
+        left: 0px; opacity: 1;
     }
 }
 .banner .scroll_down{
@@ -178,9 +186,10 @@ html {
     position: relative;
 }
 .news_right h1{
-    font-size: 96px;
+    font-size: 88px;
     color: #194448;
     float: left;
+    font-family: 'Lora', serif;
 }
 
 .news_right h2{
@@ -190,8 +199,8 @@ html {
     float: right;
 
     position: absolute;
-    top: 165px;
-    left: 225px;
+    top: 158px;
+    left: 230px;
 }
 
 .news_right ul{
@@ -289,10 +298,13 @@ html {
 /* about_area */
 
 .about_area{
-    /* max-width: 1440px; */
     padding: 30px 230px 70px;
-    display: flex;
     background-color: #194448;
+}
+
+.about_wrapper{
+    min-width: 1440px;
+    display: flex;
 }
 
 .about_left{
@@ -304,6 +316,7 @@ html {
 
 .about_left h1{
     font-size: 88px;
+    font-family: 'Lora', serif;
     color: #fff;
     float: left;
     padding: 40px 0 0 80px;
@@ -317,7 +330,7 @@ html {
 
     position: absolute;
     top: 117px;
-    left: 315px;
+    left: 335px;
 }
 
 
@@ -442,6 +455,7 @@ html {
 .top_block h1{
     font-size: 88px;
     flex-grow: 1;
+    font-family: 'Lora', serif;
 }
 
 .top_block h2{
@@ -450,7 +464,7 @@ html {
 
     flex-grow: 1;
     align-self: center;
-    padding-top: 40px;
+    padding-top: 48px;
 }
 
 .bestsell_area ul{

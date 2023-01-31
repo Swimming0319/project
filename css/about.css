@@ -1,6 +1,7 @@
 /* *{
     outline: 1px solid red;
 } */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 .wrapper{    
     width: 100vw;
@@ -19,13 +20,22 @@
     width: 100%;
 }
 .banner h1{
-    font-size: 80px;
+    font-size: 72px;
     color: #194448;
-    font-weight: 540;
+    font-family: 'Lora', serif;
+    font-weight: 500;
     position: absolute;
     z-index: 30;
-    top: 150px;
-    left: 300px;
+    display: flex;
+    align-items: start;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    height: 63%;
+    width: 50%;
+    
 }
 /* banner_area end */
 
@@ -34,8 +44,7 @@
 /* section_top */
 
 main .top{
-    max-width: 1440px;
-    margin: 0 auto;
+    min-width: 1440px;
     padding: 30px 0;
 }
 
@@ -65,17 +74,23 @@ main .bottom{
     background-color: #194448;
 }
 
+main .bottom_wrapper{
+    min-width: 1440px;
+}
+
 main .bottom h2{
     font-size: 20px;
     font-weight: 550;
     text-align: center;
     padding: 70px 0;
     color: #fff;
+    min-width: 1440px;
 }
 
 main .bottom ul{
     display: flex;
     padding: 0 70px 200px;
+    min-width: 1440px;
 }
 
 main .bottom ul li{
