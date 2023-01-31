@@ -6,7 +6,8 @@
 
 body{
     background-image: url(../img/bg/BG.png);
-    font-family: Liberation Serif, "Noto Sans TC", Mohave;
+    /* font-family: Liberation Serif, "Noto Sans TC", Mohave; */
+    font-family: Mohave, "Noto Sans TC";
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 2px;
