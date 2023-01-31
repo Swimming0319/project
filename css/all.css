@@ -18,11 +18,15 @@ body{
 header{
     background-color: #fff;
     overflow: hidden;
-    padding: 0 230px;
+    /* padding: 0 230px; */
+    min-width: 1440px;
 }
 
 .header_wrap{
-    width: 1440px;
+    width: 100%;
+    min-width: 1440px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .logo_header a img{
@@ -30,15 +34,16 @@ header{
     max-width: 280px;
     padding: 10px 30px;
 
-    float: left;
+ 
 }
 
 nav ul{
-    float: right;
+    display: flex;
 }
 
 nav ul li{
-    float: left;
+    display: flex;
+    
     margin-right: 30px;
 }
 

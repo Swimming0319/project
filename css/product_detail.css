@@ -3,12 +3,14 @@
 } */
 
 .wrapper{    
-    width: 100vw;
-    max-width:100%;
+    width: 100%;
     min-width: 1440px;
     background-color: #fff;
 }
 
+header nav .now_page{
+    color: #E4B67A;
+}
 
 /* bread_crumbs */
 .bread_crumbs{
@@ -107,7 +109,7 @@ main{
 }
 
 .product_text .deliver_time{
-    width: 220px;
+    width: 230px;
     line-height: 32px;
     font-size: 18px;
     text-align: center;

@@ -3,10 +3,13 @@
 } */
 
 .wrapper{    
-    width: 100vw;
-    max-width:100%;
+    width: 100%;
     min-width: 1440px;
     background-color: #fff;
+}
+
+header nav .now_page{
+    color: #E4B67A;
 }
 
 main{

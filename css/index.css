@@ -1,6 +1,6 @@
-/* *{
+*{
     outline: 1px solid red;
-} */
+}
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 html {
@@ -8,8 +8,8 @@ html {
   }
   
 .wrapper{    
-    width: 100vw;
-    max-width:100%; 
+    width: 100%;
+    /* max-width:100%;  */
     min-width: 1440px;
     /* margin: 0 auto; */
     /* max-width: 1920px; */
@@ -24,6 +24,7 @@ html {
 .banner img{
     display: block;
     width: 100%;
+    
 }
 
 .banner p{
@@ -86,13 +87,18 @@ html {
 /* main_area */
 /* news_area */
 
+.main{
+    width: 100%;
+    min-width: 1440px;
+}
+
 .news_area{
     max-width: 1440px;
     margin: 0 auto;
     position: relative;
     padding-bottom: 250px;
     padding-top: 50px;
-
+    
     display: flex;
 }
 
@@ -298,13 +304,16 @@ html {
 /* about_area */
 
 .about_area{
-    padding: 30px 230px 70px;
+    /* padding: 30px 230px 70px; */
     background-color: #194448;
+    min-width: 1440px;
 }
 
 .about_wrapper{
-    min-width: 1440px;
+    /* min-width: 1440px; */
     display: flex;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .about_left{
