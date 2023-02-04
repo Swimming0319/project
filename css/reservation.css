@@ -54,12 +54,14 @@ main{
     padding: 0px;
     margin: 45px 0px 45px 150px;
     border: none;
-    border-radius: 50px;
     font-size: 16px;
     background-color: #194448;
-    color: white;
+    color: #fff;
 }
-
+.reservation_bar .button button:hover{
+    cursor: pointer;
+    background-color: #E4B67A;
+}
 
 /* reservation_bar_taipei */
 
@@ -90,10 +92,14 @@ main{
     padding: 0px;
     margin: 45px 0px 45px 150px;
     border: none;
-    border-radius: 50px;
     font-size: 16px;
     background-color: #194448;
     color: white;
+}
+
+.reservation_bar_taipei .button button:hover{
+    cursor: pointer;
+    background-color: #E4B67A;
 }
 
 .reservation_bar_taipei_active{
@@ -117,7 +123,7 @@ main{
 .choose_date h1{
     display: inline-block;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     border-bottom: 4px solid #E4B67A;
 
     position: absolute;
@@ -213,7 +219,7 @@ main{
 .choose_time h1{
     display: inline-block;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     border-bottom: 4px solid #E4B67A;
 
     position: absolute;
@@ -222,6 +228,27 @@ main{
 }
 
 .choose_time .time{
+    position: absolute;
+    opacity: 0;
+}
+
+.choose_time label{
+    display:inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 30px;
+    border:1px solid #ccc;
+    border-bottom:none;
+    background-color: #ccc;
+    bottom:-1px;
+    position:relative;
+    width: 115px;
+    line-height: 35px;
+    text-align: center;
+}
+
+
+/* .choose_time .time{
     width: 115px;
     line-height: 35px;
     background-color: #F1D6B2;
@@ -230,9 +257,9 @@ main{
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 5px;
-    border-radius: 5px;
+    border-radius: 0;
     padding-left: 5px;
-}
+} */
 
 .choose_time .time:hover{
     background-color: #194448;
@@ -290,10 +317,14 @@ main{
     padding: 0px;
     margin: 45px 0px 45px 420px;
     border: none;
-    border-radius: 50px;
     font-size: 16px;
     background-color: #194448;
     color: white;
+}
+
+.information button:hover{
+    cursor: pointer;
+    background-color: #E4B67A;
 }
 /*----- information end -----*/
 

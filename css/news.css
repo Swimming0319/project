@@ -32,7 +32,7 @@ header nav .now_page{
 .title h2{
     font-size: 20px;
     color: #776F59;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
     letter-spacing: 5px;
 }
@@ -69,7 +69,6 @@ main ul li a{
 }
 
 main ul li a:hover{
-    box-shadow: 5px 5px 5px #ccc;
     transform: translateX(5px);
 }
 
@@ -86,7 +85,7 @@ main .date{
     color: white;
     background-color: #194448;
     font-size: 32px;
-    font-weight: 550;
+    font-weight: 600;
     line-height: 60px;
     padding-left: 30px;
     letter-spacing: 6px;
@@ -95,7 +94,7 @@ main .date{
 main .text h3{
     font-size: 20px;
     color: black;
-    font-weight: 800;
+    font-weight: 600;
     padding: 40px 0 20px 30px;
     letter-spacing: 6px;
 }
@@ -104,14 +103,14 @@ main .text p{
     color: black;
     padding: 0 0 50px 30px;
     color: #776F59;
-    font-weight: 550;
+    font-weight: 500;
     letter-spacing: 6px;
 }
 
-main .text:hover h3, main .text:hover p{
+/* main .text:hover h3, main .text:hover p{
     background-color: darkgray;
     color: white;
-}
+} */
 
 
 /* main_area end*/

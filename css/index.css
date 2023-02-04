@@ -28,7 +28,6 @@ html {
 
 .banner p{
     font-size: 22px;
-    font-weight: 500;
     letter-spacing: 4px;
     color: white;
     position: absolute;
@@ -116,7 +115,7 @@ html {
     width: 100%;
     max-width: 350px;
 
-    animation: img_bottom 2s ease-in-out infinite;
+    animation: img_bottom 2s ease-in-out forwards;
 }
 @keyframes img_bottom{
     0%{
@@ -137,7 +136,7 @@ html {
     width: 100%;
     width: 230px;
 
-    animation: img_center 1.5s ease-in-out infinite;
+    animation: img_center 1.5s ease-in-out forwards;
 }
 @keyframes img_center{
     0%{
@@ -147,10 +146,7 @@ html {
         left: 120px;
     }
 }
-/* .news_area .newsimg .img_center:hover{
-    transform: translateX(10px);
-    transition: 1s;
-} */
+
 .news_area .newsimg .img_top{
     display: block;
     position: absolute;
@@ -161,7 +157,7 @@ html {
     width: 100%;
     width: 250px;
 
-    animation: img_top 1.3s ease-in-out infinite;
+    animation: img_top 1.3s ease-in-out forwards;
 }
 @keyframes img_top{
     0%{
@@ -171,10 +167,6 @@ html {
         right: 60px;
     }
 }
-/* .news_area .newsimg .img_top:hover{
-    transform: translateX(10px);
-    transition: 1s;
-} */
 
 
 .news_right{
@@ -193,7 +185,7 @@ html {
 .news_right h2{
     font-size: 20px;
     color: #776F59;
-    font-weight: 700;
+    font-weight: 500;
     float: right;
 
     position: absolute;
@@ -231,7 +223,7 @@ html {
 }
 
 .news_right ul li h3{
-    font-size: 28px;
+    font-size: 30px;
     color: #E4B67A;
     font-weight: 600;
     text-align: center;
@@ -240,33 +232,33 @@ html {
 
 .news_right .main{
     font-size: 20px;
-    font-weight: 550;
+    font-weight: 600;
     text-align: left;
-    margin-left: 18px;
+    margin-left: 20px;
 }
 
 .news_right .other{
     font-size: 18px;
     text-align: left;
-    margin-left: 18px;
+    margin-left: 20px;
     padding-top: 20px;
     color: #194448;
-    font-weight: 550;
+    font-weight: 600;
 }
 
 .news_right .second{
-    margin-left: 26px;
+    margin-left: 28px;
     font-size: 20px;
-    font-weight: 550;
+    font-weight:600;
 }
 
 
 .news_right .second_other{
-    margin-left: 26px;
+    margin-left: 28px;
     font-size: 18px;
     padding-top: 18px;
     color: #194448;
-    font-weight: 550;
+    font-weight: 600;
 }
 
 /* swiper */
@@ -338,12 +330,12 @@ html {
 .about_left h2{
     font-size: 20px;
     color: #fff;
-    font-weight: 550;
+    font-weight: 500;
     float: right;
 
     position: absolute;
     top: 117px;
-    left: 335px;
+    left: 337px;
 }
 
 
@@ -355,21 +347,10 @@ html {
     clear: both;
     padding: 40px 0 80px 120px;
     flex-shrink: 0;
-
-    /* animation: about_img 3s ease-in-out infinite; */
 }
-/* @keyframes about_img{
-    0%{
-        transform: scale(1) translate(0);
-    }
-    100%{
-        transform: scale(1.08) translate(10px);
-    }
-} */
 
 .about_right{
     flex-grow: 1;
-
     position: relative;
 }
 
@@ -384,7 +365,6 @@ html {
 .about_right p{
     color: #fff;
     font-size: 20px;
-    font-weight: 500;
     letter-spacing: 8px;
     text-align: center;
     line-height: 3.5;
@@ -473,7 +453,7 @@ html {
 
 .top_block h2{
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
 
     flex-grow: 1;
     align-self: center;
@@ -495,19 +475,27 @@ html {
     color: #E4B67A;
 }
 
-.bestsell_area li a img{
-    display: block;
-    width: 100%;
-    /* width: 344px; */
+.bestsell_area li a .img{
+    max-width: 350px;
+    overflow: hidden;
 }
 
-.bestsell_area li a img:hover{
-    transform: scale(1.1);
+.bestsell_area li a .img img{
+    display: block;
+    width: 100%;
+    transition: all 0.3s linear;
 }
+
+.bestsell_area li a .img img:hover{
+    transform: scale(1.1);
+    filter: opacity(.5);
+    filter:brightness(1.2);
+}
+
 .bestsell_area li a h3{
     text-align: center;
-    font-weight: 600;
-    padding-top: 20px;
+    font-weight: 500;
+    padding-top: 10px;
 }
 
 .bestsell_area li a p{

@@ -18,7 +18,6 @@ header nav .now_page{
     margin: 0 auto;
     line-height: 45px;
     background-color: #EEEFE9;
-    font-weight: 500;
     display: flex;
     padding-left: 25px;
 }
@@ -92,7 +91,7 @@ main{
 .product_text h1{
     font-size: 28px;
     color: #194448;
-    font-weight: 550;
+    font-weight: 500;
     letter-spacing: 4px;
 }
 
@@ -103,7 +102,6 @@ main{
 
 .product_text .product_other{
     font-size: 18px;
-    font-weight: 400;
     padding: 10px 0;
     line-height: 2;
 }
@@ -200,7 +198,7 @@ main{
 .tab_group label {
     display:inline-block;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
     padding: 10px 30px;
     border:1px solid #ccc;
     border-bottom:none;
@@ -253,7 +251,7 @@ main{
 
 .product_similar h3{
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
 
     position: absolute;
     top: 35px;
@@ -281,7 +279,7 @@ main{
     text-decoration: none;
     color: black;
     text-align: center;
-    font-weight: 550;
+    font-weight: 500;
 }
 
 .swiper .swiper-slide a img{

@@ -65,7 +65,7 @@ main .top p{
     text-align: center;
     padding-bottom: 50px;
     line-height: 3;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 /* section_top end */
@@ -86,7 +86,6 @@ main .bottom_wrapper{
 
 main .bottom h2{
     font-size: 20px;
-    font-weight: 550;
     text-align: center;
     padding: 70px 0;
     color: #fff;
@@ -94,7 +93,7 @@ main .bottom h2{
 
 main .bottom ul{
     display: flex;
-    padding: 0 70px 200px;
+    padding-bottom: 200px;
 }
 
 main .bottom ul li{
@@ -135,7 +134,7 @@ main .bottom .number h3{
     text-align: right;
     font-size: 60px;
     font-weight: 600;
-    padding-left: 30px;
+    padding-left: 40px;
 }
 
 main .bottom .number h4{
@@ -161,7 +160,7 @@ main .bottom .left::before{
 
     position: absolute;
     top: 420px;
-    left: 40px;
+    left: 60px;
 }
 
 main .bottom .center::before{
@@ -173,7 +172,7 @@ main .bottom .center::before{
 
     position: absolute;
     top: 420px;
-    left: 40px;
+    left: 62px;
 }
 
 main .bottom .right::before{
@@ -185,7 +184,7 @@ main .bottom .right::before{
 
     position: absolute;
     top: 420px;
-    left: 42px;
+    left: 63px;
 }
 
 /* section_bottom end */

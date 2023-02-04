@@ -18,7 +18,6 @@ header nav .now_page{
     margin: 0 auto;
     line-height: 45px;
     background-color: #EEEFE9;
-    font-weight: 500;
     display: flex;
     padding-left: 25px;
 }
@@ -54,7 +53,7 @@ main{
 .left_block ul li a{
     color: black;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
 }
 
@@ -66,7 +65,7 @@ main{
     width: 150px;
     font-size: 18px;
     font-family: "Noto Sans TC";
-    font-weight: 600;
+    font-weight: 500;
     text-align: left;
     background-color: transparent;
     border: none;
@@ -119,7 +118,7 @@ main{
     text-align: center;
     color: black;
     position: relative;
-    font-weight: 550;
+    font-weight: 500;
 }
 
 .product_block ul li img{
