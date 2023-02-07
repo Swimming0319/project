@@ -65,6 +65,77 @@ nav ul li a:hover{
 
 /* header end */
 
+/* contact */
+
+.btn_modal_close{
+    cursor: pointer;
+}
+
+.none{
+    display: none;
+}
+
+#contactbox{
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, .5);
+}
+
+/* 元素 article 置中及基本樣式 */
+#contactbox article{
+    background-color: white;
+    width: 90%;
+    max-width: 650px;
+    padding: 20px;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#contactbox article form{
+    padding: 10px;
+}
+
+#contactbox article h1{
+    margin-bottom: 20px;
+}
+
+#contactbox article input{
+    margin-top: 10px;
+    font-size: 16px;
+    width: 590px;
+    height: 30px;
+    outline: none;
+}
+
+#contactbox article textarea{
+    resize: none;
+    font-size: 16px;
+    width: 590px;
+    outline: none;
+    margin-top: 20px;
+}
+
+#contactbox article button{
+    font-size: 14px;
+    padding: 6px 12px;
+    border: none;
+    background-color: #194448;
+    color: #fff;
+}
+
+#contactbox article button:hover{
+    cursor: pointer;
+    background-color: #E4B67A;
+}
+
+/* contact end*/
 
 
 /* footer */

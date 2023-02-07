@@ -41,7 +41,7 @@
                             <a href="reservation.html">預約體驗</a>
                         </li>
                         <li>
-                            <a href="#">聯絡我們</a>
+                            <a href="#" class="btn_modal">聯絡我們</a>
                         </li>
                         <li>
                             <a href="member_login.html">
@@ -200,6 +200,20 @@
             <a href="#"><i class="fa-solid fa-angle-right"></i></a>
         </div>
 
+        <!-- contact -->
+        <div id="contactbox" class="none">
+            <article>
+                <form action="">
+                    <h1>聯絡我們</h1>
+                    <h2>謝謝您的主動聯絡，請留下要諮詢的問題，我們會用以下資訊進行回覆。</h2>
+                    <input type="email" placeholder="輸入你的電子信箱"><br>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="輸入你的訊息。若是詢問店內特定商品，請留下商品名稱，也歡迎你留下電子信箱以外的聯絡方式，謝謝!"></textarea>
+                    <button type="submit" class="btn_modal_close">發送</button>
+                </form>
+            </article>
+        </div>
+        <!-- contact end-->
+
         <!-- footer -->
         <footer>
             <div class="logo_footer">
@@ -248,23 +262,7 @@
     </div>
     <!-- wrapper end -->
 
-    <script>
-        let dropdown = document.getElementsByClassName("dropdown-btn");
-        let i;
-
-        for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            let dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-            dropdownContent.style.display = "none";
-            } else {
-            dropdownContent.style.display = "block";
-            }
-        });
-        }
-    </script>
-
+    <script src="./js/products.js"></script>
 
 </body>
 </html>

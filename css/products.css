@@ -72,6 +72,14 @@ main{
     padding: 0;
 }
 
+.left_block .fa-angle-down{
+    position: absolute;
+    top: 5px;
+    right: -30px;
+    transform: rotate(0deg);
+    transition: all 0.6s;
+}
+
 .left_block .dropdown-container{
     display: none;
     padding-left: 8px;
@@ -87,11 +95,8 @@ main{
 }
 
 
-.left_block ul li i{
-    position: absolute;
-    top: 5px;
-    right: -30px;
-}
+
+
 
 /* left_block end */
 

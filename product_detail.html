@@ -42,7 +42,7 @@
                             <a href="reservation.html">預約體驗</a>
                         </li>
                         <li>
-                            <a href="#">聯絡我們</a>
+                            <a href="#" class="btn_modal">聯絡我們</a>
                         </li>
                         <li>
                             <a href="member_login.html">
@@ -50,10 +50,32 @@
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="" class="cart_icon">
                                 <i class="fa-solid fa-cart-shopping"></i>
+                                <div class="cart_qty">0</div>
                             </a>
                         </li>
+
+                        <div id="cartbox" class="cart_none">
+                            <article>
+                                <form action="">
+                                    <div class="cart_add">
+                                        <img src="img/product_detail/left_1.jpg" alt="">
+                                        <div class="cart_text">
+                                            <h1>經典款好睏床墊</h1>
+                                            <h2>標準雙人 5 x 6.2尺</h2>
+                                            <p>1 x NT$25,000</p>
+                                            <i class="fa-regular fa-trash-can"></i>
+                                        </div>
+                                    </div>                            
+
+                                    <div class="amount_qty">共 <span>1 </span>件商品</div>
+                                    <button type="submit"><a href="">查看購物車</a></button>
+                                </form>
+                            </article>
+                        </div>
+
+
                     </ul>
                 </nav>
                 <!-- nav end -->
@@ -79,16 +101,16 @@
                 <!-- picture_small -->
                 <div class="picture_small">
                     <div class="picture_small_wrap">
-                        <img src="img/product_detail/left_1.png" alt="">
-                        <img src="img/product_detail/left_2.png" alt="">
-                        <img src="img/product_detail/left_3.png" alt="">
+                        <img src="img/product_detail/left_1.jpg" alt="" class="change">
+                        <img src="img/product_detail/left_2.jpg" alt="" class="change">
+                        <img src="img/product_detail/left_3.jpg" alt="" class="change">
                     </div>
                 </div>
                 <!-- picture_small end -->
 
                 <!-- picture_main -->
                 <div class="picture_main">
-                    <img src="img/product_detail/main.png" alt="">
+                    <img src="img/product_detail/left_1.jpg" alt="" id="pic_main">
                 </div>
                 <!-- picture_main end -->
 
@@ -100,32 +122,35 @@
                     <div class="product_other">*任選一款，全台免運🚚<br>*現在下單，送限量紅包袋🧧</div>
                     <div class="deliver_time">📢預計出貨時間：2月底</div>
                     <p>NT$25,000</p>
-                    <div class="quantity-wrapper">
+                    <form action="" method="get" id="quantity_form">
+                        <div class="quantity-wrapper">
 
-                        <div class="quantity-title">數量</div>
+                            <div class="quantity-title">數量</div>
 
-                        <div class="quantity_block">
-                            <div class="input_group">
-                                <span class="input_group_btn">
-                                    <button type="button" class="btn" style="border-radius: 3px 0 0 3px;">
-                                        <i class="fa-solid fa-minus"></i>
-                                    </button>
-                                </span>
-                                
-                                <input class="number" type="text" value="1" min="1">
+                            <div class="quantity_block">
+                                <div class="input_group">
+                                    <span class="input_group_btn">
+                                        <button type="button" class="btn" id="btn_minus" style="border-radius: 3px 0 0 3px;">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </button>
+                                    </span>
+                                    
+                                    <input id="number" type="text" value="1" min="1">
 
-                                <span class="input_group_btn">
-                                    <button type="button" class="btn" style="border-radius: 0 3px 3px 0;">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </button>
-                                </span>
+                                    <span class="input_group_btn">
+                                        <button type="button" class="btn" id="btn_plus" style="border-radius: 0 3px 3px 0;">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="cart_container">
-                        <button class="cart_btn"><span>加入購物車</span></button>
-                    </div>
+                        <div class="cart_container">
+                            <button type="button" class="cart_btn" id="cart_btn"><span>加入購物車</span></button>
+                        </div>
+                    </form>
+
                 </div>
                 <!-- product_text end -->
 
@@ -236,6 +261,20 @@
 
         </main>
 
+        <!-- contact -->
+        <div id="contactbox" class="none">
+            <article>
+                <form action="">
+                    <h1>聯絡我們</h1>
+                    <h2>謝謝您的主動聯絡，請留下要諮詢的問題，我們會用以下資訊進行回覆。</h2>
+                    <input type="email" placeholder="輸入你的電子信箱"><br>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="輸入你的訊息。若是詢問店內特定商品，請留下商品名稱，也歡迎你留下電子信箱以外的聯絡方式，謝謝!"></textarea>
+                    <button type="submit" class="btn_modal_close">發送</button>
+                </form>
+            </article>
+        </div>
+        <!-- contact end-->
+
         <!-- footer -->
         <footer>
             <div class="logo_footer">
@@ -286,16 +325,7 @@
     <!-- wrapper end -->
     
     <script src="js/swiper-bundle.min.js"></script>
-    <script>
-        let mySwiper = new Swiper ('.swiper', {
-            loop: true, // 循環模式選項
-            
-            // 如果需要前進後退按钮
-            navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-            },
-        }) 
-    </script>
+    <script src="./js/product_detail.js"></script>
+
 </body>
 </html>

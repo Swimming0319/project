@@ -42,7 +42,7 @@
                             <a href="reservation.html">預約體驗</a>
                         </li>
                         <li>
-                            <a href="#">聯絡我們</a>
+                            <a href="#" class="btn_modal">聯絡我們</a>
                         </li>
                         <li>
                             <a href="member_login.html">
@@ -116,6 +116,20 @@
         </main>
         <!-- main_area end-->
 
+        <!-- contact -->
+        <div id="contactbox" class="none">
+            <article>
+                <form action="">
+                    <h1>聯絡我們</h1>
+                    <h2>謝謝您的主動聯絡，請留下要諮詢的問題，我們會用以下資訊進行回覆。</h2>
+                    <input type="email" placeholder="輸入你的電子信箱"><br>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="輸入你的訊息。若是詢問店內特定商品，請留下商品名稱，也歡迎你留下電子信箱以外的聯絡方式，謝謝!"></textarea>
+                    <button type="submit" class="btn_modal_close">發送</button>
+                </form>
+            </article>
+        </div>
+        <!-- contact end-->
+
         <!-- footer -->
         <footer>
             <div class="logo_footer">
@@ -167,6 +181,26 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+
+        //contact 彈窗
+        let contactbox_el = document.getElementById("contactbox");
+        let btn_modal = document.getElementsByClassName("btn_modal")[0];
+        btn_modal.addEventListener("click", function(){
+            contactbox_el.classList.remove("none");
+        });
+        let btn_modal_close = document.getElementsByClassName("btn_modal_close")[0];
+        btn_modal_close.addEventListener("click", function(){
+            confirm('發送成功');
+            contactbox_el.classList.add("none");
+        }); 
+        contactbox_el.addEventListener("click", function(){
+            this.classList.add("none");
+        });
+        // 點擊 contactbox 中的白色區域，不會關掉 modal
+        contactbox_el.querySelector("article").addEventListener("click", function(e){
+            e.stopPropagation();
+        });
+        
     </script>
 
 </body>

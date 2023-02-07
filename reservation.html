@@ -8,6 +8,7 @@
     <!-- FontAwesome CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link href="dist/helloweek.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reservation.css">
     <title>預約體驗-睏飽未</title>
 </head>
@@ -42,7 +43,7 @@
                             <a href="reservation.html" class="now_page">預約體驗</a>
                         </li>
                         <li>
-                            <a href="#">聯絡我們</a>
+                            <a href="#" class="btn_modal">聯絡我們</a>
                         </li>
                         <li>
                             <a href="member_login.html">
@@ -87,72 +88,27 @@
                     <button type="button" id="choose"> 選 擇 </button>
                 </div>    
             </div>
-            <form action="#" method="get" id="my_form">
+            <form action="https://tw.yahoo.com" method="get" id="my_form">
                 <div id="choose_date" class="choose_date">
                     <h1>選擇日期</h1>
                     <!-- calendar_block -->
-                    <div class="calendar">
-                        <div class="month">      
-                            <ul>
-                            <li class="prev"><i class="fa-solid fa-angle-left" style="margin-right: 10px;"></i>上個月</li>
-                            <li class="next">下個月<i class="fa-solid fa-angle-right" style="margin-left: 10px;"></i></li>
-                            <li>二月 2023</li>
-                            </ul>
-                        </div>
-                        <ul class="weekdays">
-                            <li>一</li>
-                            <li>二</li>
-                            <li>三</li>
-                            <li>四</li>
-                            <li>五</li>
-                            <li style="color: #FE7272;">六</li>
-                            <li style="color: #FE7272;">日</li>
-                        </ul>
 
-                        <ul class="days">  
-                            <li>30</li>
-                            <li>31</li>
-                            <li><span class="active">1</span></li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                            <li>6</li>
-                            <li>7</li>
-                            <li>8</li>
-                            <li>9</li>
-                            <li>10</li>
-                            <li>11</li>
-                            <li>12</li>
-                            <li>13</li>
-                            <li>14</li>
-                            <li>15</li>
-                            <li>16</li>
-                            <li>17</li>
-                            <li>18</li>
-                            <li>19</li>
-                            <li>20</li>
-                            <li>21</li>
-                            <li>22</li>
-                            <li>23</li>
-                            <li>24</li>
-                            <li>25</li>
-                            <li>26</li>
-                            <li>27</li>
-                            <li>28</li>
-                        </ul>
-                        
-                    </div>
+        
                 </div>
 
                 <div id="choose_time" class="choose_time">
                     <h1>選擇時間</h1>
-                    <input type="radio" id="13" class="time">
-                    <label for="13">13:00</label>
-                    <div class="time">13:00</div>
-                    <div class="time">14:00</div>
-                    <div class="time">15:00</div>
-                    <div class="time">16:00</div>
+                    <input type="radio" id="13" name="time" class="input">                    
+                    <input type="radio" id="14" name="time" class="input">
+                    <input type="radio" id="15" name="time" class="input">
+                    <input type="radio" id="16" name="time" class="input">
+                    
+                    <div class="label_wrapper">
+                        <label for="13" class="time">13:00</label>
+                        <label for="14" class="time">14:00</label>
+                        <label for="15" class="time">15:00</label>
+                        <label for="16" class="time">16:00</label>
+                    </div>
                 </div>
 
                 <div id="information" class="information">
@@ -171,9 +127,19 @@
                             聯絡電話: 03-3333333
                         </p>
                     </div>
-                    <button type="submit">預 約 確 認</button>
+                    <button type="button" id="reservation" class="btn_mode">預 約 確 認</button>
                 </div>
+                <div id="lightbox" class="none">
+                    <article>
+                      <h1>請確認您的預約資料是否正確?</h1>
+                      <p>日期: 2/20(一)</p>
+                      <p>時間: 13:00</p>
+                      <button type="submit" class="btn_mode_close">確認</button>
+                    </article>
+                </div>
+
             </form>
+            
 
             <!-- reservation_bar_taipei -->
             <div id="taipei" class="reservation_bar_taipei">
@@ -187,6 +153,20 @@
 
         </main>
         <!-- main_area end -->
+
+        <!-- contact -->
+           <div id="contactbox" class="none">
+            <article>
+                <form action="">
+                    <h1>聯絡我們</h1>
+                    <h2>謝謝您的主動聯絡，請留下要諮詢的問題，我們會用以下資訊進行回覆。</h2>
+                    <input type="email" placeholder="輸入你的電子信箱"><br>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="輸入你的訊息。若是詢問店內特定商品，請留下商品名稱，也歡迎你留下電子信箱以外的聯絡方式，謝謝!"></textarea>
+                    <button type="submit" class="btn_modal_close">發送</button>
+                </form>
+            </article>
+        </div>
+        <!-- contact end-->
 
         <!-- footer -->
         <footer>
@@ -240,6 +220,7 @@
 
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/reservation.js"></script>
+    <script src="dist/helloweek.min.js"></script>
 
       
 </body>
