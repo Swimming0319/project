@@ -12,7 +12,7 @@ header nav .now_page{
 }
 
 .login_wrapper{
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
     background-image: url('../img/member/bg.png');
 }

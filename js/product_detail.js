@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded',function(){
     let mySwiper = new Swiper ('.swiper', {
         loop: true, // 循環模式選項
-        
+        autoplay: true,
         // 如果需要前進後退按钮
         navigation: {
         nextEl: '.swiper-button-next',

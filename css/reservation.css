@@ -24,13 +24,12 @@ header nav .now_page{
 main{
     max-width: 1440px;
     margin: 0 auto;
-    margin-bottom: 100px;
 }
 /*----- reservation_bar -----*/
 
 .reservation_bar{
     width: 1000px;
-    margin: 70px auto;
+    margin: 60px auto;
     background-color: #fff;
 
     display: flex;
@@ -67,7 +66,7 @@ main{
 
 .reservation_bar_taipei{
     width: 1000px;
-    margin: 70px auto;
+    margin: 70px auto 100px;
     background-color: #fff;
 
     display: flex;
@@ -123,7 +122,7 @@ main{
 .choose_date h1{
     display: inline-block;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     border-bottom: 4px solid #E4B67A;
 
     position: absolute;
@@ -133,71 +132,45 @@ main{
 
 /* calendar_block */
 
-.calendar{
+#datepicker{
     width: 1000px;
     margin: 0 auto;
 }
 
-.month {
-    padding: 30px 50px;
-    background: white;
-}
-
-.month ul li {
+/* 修改日曆樣式 */
+.ui-datepicker-today .ui-state-highlight {
+    border: 1px solid #E4B67A;
     color: black;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-align:center
+    background-color: #E4B67A;
 }
 
-.month .prev {
-    float: left;
-    font-size: 20px;
-}
-
-.month .next {
-    float: right;
-    font-size: 20px;
-}
-
-.weekdays {
-    padding: 10px 0;
-    background-color: #ccc;
-}
-
-.weekdays li {
-    display: inline-block;
-    width: 13.6%;
-    color: black;
-    font-weight: 600;
-    text-align: center;
-    font-size: 18px;
-}
-
-.days {
-    padding: 20px 0;
-    background: white;
-}
-
-.days li {
-    display: inline-block;
-    width: 13.6%;
-    text-align: center;
-    margin-bottom: 15px;
-    color: black;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.days li .active {
-    background: #194448;
+.ui-datepicker-current-day .ui-state-active{
+    border: 1px solid #194448;
     color: white;
-    display: block;
-    margin: 0 auto;
-    width: 35px;
-    line-height: 35px;
-    border-radius: 50%;
+    background-color: #194448;
+}
+
+.ui-widget.ui-widget-content {
+    border: none;
+    width: 1000px;
+    padding: 10px;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    position: relative;
+    padding: 0.2em 0;
+    font-size: 18px;
+}
+
+.ui-datepicker table {
+    width: 100%;
+    font-size: 16px;
+    border-collapse: collapse;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    text-align: center;
+    line-height: 40px;
 }
 
 /* calendar_block end */
@@ -220,7 +193,7 @@ main{
 .choose_time h1{
     display: inline-block;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     border-bottom: 4px solid #E4B67A;
 
     position: absolute;
@@ -240,8 +213,7 @@ main{
 .choose_time label{
     display:inline-block;
     font-size: 18px;
-    font-weight: 700;
-    padding: 0 30px;
+    font-weight: 500;
     margin-right: 20px;
     border:1px solid #ccc;
     border-bottom:none;
@@ -251,6 +223,8 @@ main{
     width: 115px;
     line-height: 35px;
     text-align: center;
+    letter-spacing: 5px;
+    padding-left: 5px;
 }
 
 .choose_time label:hover{
@@ -284,7 +258,7 @@ main{
 .information h1{
     display: inline-block;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     border-bottom: 4px solid #E4B67A;
 
     position: absolute;
@@ -366,6 +340,11 @@ main{
 #lightbox article button{
     margin-top: 20px;
     font-size: 16px;
+    border: none;
+    background-color: #194448;
+    color: white;
+    width: 50px;
+    line-height: 30px;
 }
 
 

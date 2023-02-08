@@ -63,6 +63,7 @@ html {
     font-weight: 500;
     writing-mode: vertical-lr;
     padding-left: 20px;
+    letter-spacing: 4px;
 }
 
 .banner .scroll_down a{
@@ -308,7 +309,7 @@ html {
 .about_wrapper{
     /* min-width: 1440px; */
     display: flex;
-    width: 76%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -317,6 +318,7 @@ html {
     flex-basis: 450px;
     overflow: hidden;
     position: relative;
+    margin-left: 55px;
 }
 
 .about_left h1{
@@ -346,12 +348,12 @@ html {
     border-radius: 0 0 12em 0;
     clear: both;
     padding: 40px 0 80px 120px;
-    flex-shrink: 0;
 }
 
 .about_right{
     flex-grow: 1;
     position: relative;
+    margin-right: 55px;
 }
 
 .about_right .top{

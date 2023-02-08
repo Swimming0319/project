@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/all.css">
     <!-- FontAwesome CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link href="dist/helloweek.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reservation.css">
     <title>預約體驗-睏飽未</title>
 </head>
@@ -88,20 +88,20 @@
                     <button type="button" id="choose"> 選 擇 </button>
                 </div>    
             </div>
-            <form action="https://tw.yahoo.com" method="get" id="my_form">
+            <form action="" method="get" id="my_form">
                 <div id="choose_date" class="choose_date">
                     <h1>選擇日期</h1>
                     <!-- calendar_block -->
+                    <div id="datepicker"></div>
 
-        
                 </div>
 
                 <div id="choose_time" class="choose_time">
                     <h1>選擇時間</h1>
-                    <input type="radio" id="13" name="time" class="input">                    
-                    <input type="radio" id="14" name="time" class="input">
-                    <input type="radio" id="15" name="time" class="input">
-                    <input type="radio" id="16" name="time" class="input">
+                    <input type="radio" id="13" name="time1300" class="input">                    
+                    <input type="radio" id="14" name="time1400" class="input">
+                    <input type="radio" id="15" name="time1500" class="input">
+                    <input type="radio" id="16" name="time1600" class="input">
                     
                     <div class="label_wrapper">
                         <label for="13" class="time">13:00</label>
@@ -132,8 +132,16 @@
                 <div id="lightbox" class="none">
                     <article>
                       <h1>請確認您的預約資料是否正確?</h1>
-                      <p>日期: 2/20(一)</p>
-                      <p>時間: 13:00</p>
+                      <p>
+                        日期: 
+                        <span id="submit_month">2</span> 
+                        <span id="submit_date">20</span>
+                        <span>日</span>
+                        </p>
+                      <p>
+                        時間: 
+                        <span id="submit_time" style="letter-spacing: 3px;">13:00</span> 
+                        </p>
                       <button type="submit" class="btn_mode_close">確認</button>
                     </article>
                 </div>
@@ -218,9 +226,13 @@
     <!-- wrapper end -->
     
 
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/reservation.js"></script>
-    <script src="dist/helloweek.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="js/reservation.js"></script>
+
 
       
 </body>

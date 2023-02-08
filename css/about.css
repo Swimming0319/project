@@ -80,7 +80,7 @@ main .bottom{
 }
 
 main .bottom_wrapper{
-    width: 76%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -100,6 +100,7 @@ main .bottom ul li{
     flex-grow: 1;
     flex-basis: 300px;
     color: #fff;
+    margin: 0 40px;
 
     position: relative;
 }
@@ -149,9 +150,10 @@ main .bottom ul li p{
     text-align: center;
     padding-top: 10px;
     font-size: 18px;
+    border-top: 3px solid white;
 }
 
-main .bottom .left::before{
+/* main .bottom .left::before{
     content: '';
     display: block;
     width: 350px;
@@ -161,9 +163,9 @@ main .bottom .left::before{
     position: absolute;
     top: 420px;
     left: 60px;
-}
+} */
 
-main .bottom .center::before{
+/* main .bottom .center::before{
     content: '';
     display: block;
     width: 350px;
@@ -173,9 +175,9 @@ main .bottom .center::before{
     position: absolute;
     top: 420px;
     left: 62px;
-}
+} */
 
-main .bottom .right::before{
+/* main .bottom .right::before{
     content: '';
     display: block;
     width: 350px;
@@ -185,7 +187,7 @@ main .bottom .right::before{
     position: absolute;
     top: 420px;
     left: 63px;
-}
+} */
 
 /* section_bottom end */
 
