@@ -186,7 +186,6 @@ document.addEventListener('DOMContentLoaded',function(){
             });
 
             
-            
         }
     });
 
@@ -198,11 +197,12 @@ document.addEventListener('DOMContentLoaded',function(){
         cart_qty.innerHTML = 0;
         alert('你的購物車是空的'); //原先使用改元素內容 再次點擊購物車會沒有資料
         cartbox.classList.add("cart_none");
+        //恢復頁面滾動
+        document.documentElement.style.overflowY = 'scroll';
+        document.documentElement.style.marginRight = '0px';
 
     });
  
-
-
 
 
 });

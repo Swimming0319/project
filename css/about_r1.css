@@ -1,0 +1,174 @@
+/* *{
+    outline: 1px solid red;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+.wrapper{    
+    width: 100%;
+    min-width: 1440px;
+}
+
+header nav .now_page{
+    color: #E4B67A;
+}
+
+
+.top{
+    /* min-width: 1440px; */
+    background-image: url(../img/about/bg1.png);
+    background-size: cover;
+    height: 100vh;
+    padding-top: 240px;
+}
+
+
+.top h1{
+    font-size: 20px;
+    font-weight: 600;
+    width: 200px;
+    line-height: 40px;
+    margin: 0 70px 20px 220px;
+    background-color: #D9D9D9;
+    
+    text-align: center;
+}
+
+.top p{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 2.5;
+    margin-left: 220px;
+}
+
+/* bottom */
+
+.bottom{
+    /* width: 100%; */
+    min-width: 1440px;
+    /* padding: 0 230px; */
+    background-image: url(../img/about/bg2.png);
+    background-size: cover;
+
+}
+
+.bottom_wrapper{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+
+.bottom h2{
+    font-size: 20px;
+    font-weight: 600;
+    width: 200px;
+    line-height: 40px;
+    margin: 0 auto;
+    background-color: #D9D9D9;
+    
+    text-align: center;
+    /* padding: 70px 0; */
+    /* color: #fff; */
+}
+
+.bottom ul{
+    display: flex;
+    padding-top: 70px;
+    padding-bottom: 200px;
+}
+
+.bottom ul li{
+    flex-grow: 1;
+    flex-basis: 300px;
+    color: #fff;
+    margin: 0 40px;
+
+    position: relative;
+}
+
+
+.bottom .img{
+    max-width: 330px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+
+.bottom .img img{
+    display: block;
+    width: 100%;
+    transition: all 0.3s linear;
+}
+
+.bottom .img img:hover{
+    transform: scale(1.1);
+    filter: opacity(.5);
+    filter:brightness(1.2);
+}
+
+.bottom .number{
+    display: flex;
+}
+
+.bottom .number h3{
+    flex-grow: 1;
+    text-align: right;
+    font-size: 60px;
+    font-weight: 600;
+    padding-left: 40px;
+}
+
+.bottom .number h4{
+    flex-grow: 1;
+    align-self: center;
+    font-weight: 550;
+    font-size: 22px;
+    margin: 25px 0 0 10px;
+}
+
+.bottom ul li p{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 18px;
+    border-top: 3px solid white;
+}
+
+/* team */
+
+
+.team{
+    width: 100%;
+    min-width: 1440px;
+    background-image: url(../img/about/bg3.png);
+    background-size: cover;
+    height: 100vh;
+
+    position: relative;
+}
+
+.team_wr{
+    width: 500px;
+    position: absolute;
+    top: 30%;
+    right: 11%;
+}
+
+.team_wr h1{
+    font-size: 20px;
+    width: 200px;
+    line-height: 40px;
+    background-color: #194448;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team_wr p{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 2.5;
+}
+
