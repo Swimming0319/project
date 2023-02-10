@@ -115,8 +115,8 @@ document.addEventListener('DOMContentLoaded',function(){
     let cart_btn = document.getElementById('cart_btn');
     let cart_qty = document.getElementsByClassName('cart_qty')[0];
     cart_btn.addEventListener('click', function(e){
-        if(number_el.value == ''){
-            e.preventDefault(); //使用者沒打字 進入此區 停止表單預設資料送出行為
+        if(number_el.value == '' || number_el.value == 0){
+            e.preventDefault(); //使用者沒打字或打0時 進入此區 停止表單預設資料送出行為
             alert('請輸入輸量');//提醒使用者輸入數量
         }else{
             cart_qty.style.opacity = '1';
@@ -125,33 +125,84 @@ document.addEventListener('DOMContentLoaded',function(){
             // console.log(typeof(value3));
             let value4 = parseInt(number_el.value);
             // console.log(typeof(value4));
-            // console.log(value4);
             value3 += value4;
             //更改元素的內容為新計算的值
             cart_qty.innerHTML = value3;
+
             if(value3 > 200){
                 cart_qty.style.opacity = '0';
                 cart_qty.innerHTML = 0;
                 alert('請直接聯繫客服03-3333333，將由專員為您服務');
             }
+
+            //新增購物車共幾件商品 1 x NT$25,000 件數依照input標籤裡數字加上去
+            let amount_number = document.getElementById('amount_number');
+            let value5 = parseInt(amount_number.innerHTML);
+            // console.log(value5);
+            // console.log(amount_number.innerHTML);
+            value5 += value4;
+            amount_number.innerHTML = value5;
+            // console.log(value5);
+            if(value5 > 200){
+                amount_number.innerHTML = 0;
+            }
+
+            //彈窗 
+            let cartbox = document.getElementById('cartbox');
+            if(value5 === 0){  //如果0件商品就不顯示彈窗 字串要轉數字
+                cartbox.classList.add("cart_none"); 
+            }else{
+                cartbox.classList.remove('cart_none');
+                cartbox.querySelector("article").classList.remove('article_none');
+                //停止頁面滾動
+                let m = window.innerWidth - document.body.clientWidth;//滾動條的寬度
+                // console.log(m);
+                document.documentElement.style.overflowY = 'hidden';
+                document.documentElement.style.marginRight = m +'px';
+
+                
+                
+                //嘗試把內容再塞進去
+                // let check_cart = document.getElementsByClassName('check_cart')[0];
+                // let str = "";
+                // check_cart.insertAdjacentHTML("beforebegin", str);
+            }
+
+            //取消彈窗
+            cartbox.addEventListener("click", function(){
+                //動畫彈走
+                cartbox.querySelector("article").classList.add('article_none');
+                //cartbox none
+                cartbox.classList.add("cart_none");
+
+                //恢復頁面滾動
+                document.documentElement.style.overflowY = 'scroll';
+                document.documentElement.style.marginRight = '0px';
+                // console.log(m);
+            });
+            // 點擊 cartbox 中的白色區域，不會關掉 modal
+            cartbox.querySelector("article").addEventListener("click", function(e){
+                e.stopPropagation();
+            });
+
+            
+            
         }
     });
 
-    //滑鼠滑過購物車顯示清單  若再新增商品內容 position會跑掉?
-    let cartbox = document.getElementById('cartbox');
-    let cart_icon = document.getElementsByClassName('cart_icon')[0];
-    cart_icon.addEventListener('mouseenter', function(){
-        cartbox.classList.remove('cart_none');
-    });
-    cart_icon.addEventListener('mouseleave', function(){
+    //垃圾桶刪減清單
+    let trash_can = document.getElementsByClassName('fa-trash-can')[0];
+    trash_can.addEventListener('click', function(){
+        amount_number.innerHTML = 0;
+        cart_qty.style.opacity = '0';
+        cart_qty.innerHTML = 0;
+        alert('你的購物車是空的'); //原先使用改元素內容 再次點擊購物車會沒有資料
         cartbox.classList.add("cart_none");
+
     });
-    cartbox.querySelector("article").addEventListener('mouseenter', function(){
-        cartbox.classList.remove('cart_none');
-    });
-    cartbox.querySelector("article").addEventListener('mouseleave', function(){
-        cartbox.classList.add("cart_none");
-    });
+ 
+
+
 
 
 });

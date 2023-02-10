@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded',function(){
         let time_on = document.getElementsByClassName('time -on')[0]; //取得所選的時間
         //console.log(time_on);
 
-        //如果沒選時間, 提醒並關閉彈窗 
+        //如果沒選時間, 提醒並關閉彈窗
         if(time_on === undefined){
             alert('請選擇時間');
             lightbox_el.classList.add("none");    

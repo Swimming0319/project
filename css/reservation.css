@@ -202,19 +202,13 @@ main{
 }
 
 .input {
-    position:absolute;
     opacity: 0;
-}
-
-.choose_time .label_wrapper{
-    margin-left: 20px;
 }
 
 .choose_time label{
     display:inline-block;
     font-size: 18px;
     font-weight: 500;
-    margin-right: 20px;
     border:1px solid #ccc;
     border-bottom:none;
     background-color: #ccc;
