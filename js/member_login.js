@@ -10,9 +10,10 @@ document.addEventListener('DOMContentLoaded',function(){
     the_form_el.addEventListener('submit',function(e){
         e.preventDefault(); //先設定表單送出取消
 
-        let email_el = document.getElementById('email');
+        let email_el = document.getElementById('mail');
         let password_el = document.getElementById('password');
 
+        console.log(email_el.value);
 
         let send_data = true;
         //email驗證用套件 is js
