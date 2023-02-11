@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
     //表單
     let the_form_el = document.getElementById('the_form');
-    console.log(the_form_el);
+    // console.log(the_form_el);
 
     //submit (驗證成功才送出資料)
     the_form_el.addEventListener('submit',function(e){
