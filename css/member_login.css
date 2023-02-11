@@ -95,6 +95,9 @@ header nav .now_page{
     width: 30px;
 }
 
+.-error{
+    border: 1px solid red;
+}
 
 
 
