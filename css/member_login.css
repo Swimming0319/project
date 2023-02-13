@@ -53,6 +53,18 @@ header nav .now_page{
     padding-left: 10px;
 }
 
+/* .alert_block{
+    height: 30px;
+} */
+
+/* #password{
+    margin-bottom: 30px;
+} */
+
+.login_text .-on{
+    border: 1.6px solid #E4B67A;
+}
+
 .login_text button{
     width: 300px;
     height: 30px;
@@ -61,7 +73,7 @@ header nav .now_page{
     color: #fff;
     font-weight: 500;
     font-size: 16px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     letter-spacing: 1px;
 }
 
@@ -96,7 +108,7 @@ header nav .now_page{
 }
 
 .-error{
-    border: 1px solid red;
+    border: 1.6px solid rgba(231, 62, 62, 0.651);
 }
 
 

@@ -63,7 +63,9 @@ document.addEventListener('DOMContentLoaded',function(){
     number_el.addEventListener('keyup',function(e){
         // console.log(e.target.value); //欄位輸123 出現123
         let str = (e.target.value).replace(/\D/g,'');  //replace找到某個字 用別的字串取代;正規式用兩個 / 字元; \D 表示非數字 +g是global 表示找到的全部的非數字都會轉空字串
+        // console.log(str);
         e.target.value = str; //新的資料再放回欄位上
+        console.log(e.target.value);
     });
     //使用者有填資料才送出 沒填不送出form
     // let quantity_form_el = document.getElementById('quantity_form');
@@ -76,7 +78,7 @@ document.addEventListener('DOMContentLoaded',function(){
     // });
 
 
-    //數量按鈕新增減少 當鍵盤重輸數字就失效?
+    //數量按鈕新增減少 當鍵盤重輸數字也要增減
     let btn_plus = document.getElementById('btn_plus');
     btn_plus.addEventListener('click', function(){
         // console.log(number_el.value);
@@ -94,7 +96,8 @@ document.addEventListener('DOMContentLoaded',function(){
             // number_el.setAttribute('value', ++value);
             value1 += 1;
             // console.log(value1);
-            number_el.setAttribute('value', value1);
+            // number_el.setAttribute('value', value1); 此方法當鍵盤重輸數字會失效
+            number_el.value = value1; 
         }
     });
 
@@ -104,7 +107,8 @@ document.addEventListener('DOMContentLoaded',function(){
         //規定>1 才能減少
         if(value2 > 1){
             value2 -= 1;
-            number_el.setAttribute('value', value2);
+            // number_el.setAttribute('value', value2);
+            number_el.value = value2;
         }
     });
 
