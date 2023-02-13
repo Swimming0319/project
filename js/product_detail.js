@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded',function(){
         let str = (e.target.value).replace(/\D/g,'');  //replace找到某個字 用別的字串取代;正規式用兩個 / 字元; \D 表示非數字 +g是global 表示找到的全部的非數字都會轉空字串
         // console.log(str);
         e.target.value = str; //新的資料再放回欄位上
-        console.log(e.target.value);
+        // console.log(e.target.value);
     });
     //使用者有填資料才送出 沒填不送出form
     // let quantity_form_el = document.getElementById('quantity_form');

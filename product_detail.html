@@ -22,7 +22,7 @@
                 <!-- hamburger -->
                 <input class="menu-btn" type="checkbox" id="menu-btn" />
                 <label class="menu-icon" for="menu-btn"><div class="navicon"></div></label>
-                
+
                 <!-- logo -->
                 <div class="logo_header">
                     <a href="index.html" title="睏飽未">
@@ -41,7 +41,7 @@
                             <a href="news.html">最新消息</a>
                         </li>
                         <li>
-                            <a href="products.html">所有商品</a>
+                            <a href="products.html" class="now_page">所有商品</a>
                         </li>
                         <li>
                             <a href="reservation.html">預約體驗</a>
@@ -55,10 +55,32 @@
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="" class="cart_icon">
                                 <i class="fa-solid fa-cart-shopping"></i>
+                                <div class="cart_qty">0</div>
                             </a>
                         </li>
+
+                        <div id="cartbox" class="cart_none">
+                            <article>
+                                <form action="">
+                                    <div class="cart_add">
+                                        <img src="img/product_detail/left_1.jpg" alt="">
+                                        <div class="cart_text">
+                                            <h1>經典款好睏床墊</h1>
+                                            <h2>標準雙人 5 x 6.2尺</h2>
+                                            <p><span id="amount_number">0</span>  x NT$25,000</p>
+                                            <i class="fa-regular fa-trash-can"></i>
+                                        </div>
+                                    </div>                            
+
+                                    <!-- <div class="amount_qty">共 <span id="amount_number">0 </span>件商品</div> -->
+                                    <button type="button" class="check_cart"><a href="https://google.com">查看購物車</a></button>
+                                </form>
+                            </article>
+                        </div>
+
+
                     </ul>
                 </nav>
                 <!-- nav end -->
@@ -293,7 +315,7 @@
                 <li>
                     <ul>
                         <li>聯絡我們</li>
-                        <li style="font-size: 16px;">service@kunbamei.com</li>
+                        <li style="font-size: 16px; color: white;">service@kunbamei.com</li>
                     </ul>
                 </li>
             </ul>
