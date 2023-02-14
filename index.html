@@ -41,8 +41,17 @@
                         <li>
                             <a href="news.html">最新消息</a>
                         </li>
-                        <li>
+                        <li class="products_menu">
                             <a href="products.html">所有商品</a>
+                            <ol>
+                                <li><a href="#">躺的<i class="fa-solid fa-angle-right"></i></a></li>
+                                <li><a href="#">穿的<i class="fa-solid fa-angle-right"></i></a></li>
+                                <li><a href="#">用的<i class="fa-solid fa-angle-right"></i></a></li>
+                            </ol>
+                            <span style="border-right: 1px solid #fff;"><a href="#">躺的</a></span> 
+                            <span style="border-right: 1px solid #fff;"><a href="#">穿的</a></span> 
+                            <span><a href="#">用的</a></span>
+
                         </li>
                         <li>
                             <a href="reservation.html">預約體驗</a>
@@ -104,7 +113,7 @@
                     <h2>／最新消息</h2>
                     <div class="swiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide aaa" data-swiper-autoplay="5000">
+                            <div class="swiper-slide" data-swiper-autoplay="5000">
                                 <ul>
                                     <li>
                                         <a href="news.html">
@@ -342,6 +351,8 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="./js/jquery-3.6.3.js"></script>
     <script>
         AOS.init();
 
@@ -354,38 +365,18 @@
                 nextEl: ".arrow_button_next",
                 prevEl: ".arrow_button_prev",
             },
-            // breakpoints: {
-            //   1: {
-            //     slidesPerView: 1,
-            //     centeredSlides: false,
-            //     spaceBetween: 5,
-            //   },
-            //   992: {
-            //     slidesPerView: 3,
-            //     spaceBetween: 20,
-            //     centeredSlides: false,
-            //   },
-            // }
+            breakpoints: { 
+                320: {  //當螢幕寬度大於等於320
+                slidesPerView: 1,
+                spaceBetween: 10
+                },
+                1280: {  //當螢幕寬度大於等於1280
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            }
         }) 
 
-        //contact 彈窗
-        let contactbox_el = document.getElementById("contactbox");
-        let btn_modal = document.getElementsByClassName("btn_modal")[0];
-        btn_modal.addEventListener("click", function(){
-            contactbox_el.classList.remove("none");
-        });
-        let btn_modal_close = document.getElementsByClassName("btn_modal_close")[0];
-        btn_modal_close.addEventListener("click", function(){
-            confirm('發送成功');
-            contactbox_el.classList.add("none");
-        }); 
-        contactbox_el.addEventListener("click", function(){
-            this.classList.add("none");
-        });
-        // 點擊 contactbox 中的白色區域，不會關掉 modal
-        contactbox_el.querySelector("article").addEventListener("click", function(e){
-            e.stopPropagation();
-        });
     </script>
 
 </body>

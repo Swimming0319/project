@@ -40,8 +40,16 @@
                     <li>
                         <a href="news.html">最新消息</a>
                     </li>
-                    <li>
+                    <li class="products_menu">
                         <a href="products.html">所有商品</a>
+                        <ol>
+                            <li><a href="#">躺的<i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href="#">穿的<i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href="#">用的<i class="fa-solid fa-angle-right"></i></a></li>
+                        </ol>
+                        <span style="border-right: 1px solid #fff;"><a href="#">躺的</a></span> 
+                        <span style="border-right: 1px solid #fff;"><a href="#">穿的</a></span> 
+                        <span><a href="#">用的</a></span>
                     </li>
                     <li>
                         <a href="reservation.html">預約體驗</a>
@@ -70,7 +78,7 @@
         <div class="top">
     
             <h1>關於睏飽未</h1>
-            <p data-aos="fade-right" data-aos-duration="2000">
+            <p data-aos="fade-up" data-aos-duration="2000">
                 失眠是現代人的普遍煩惱，「睡眠」時間越來越短<br>
 
                 就算睡了覺也未必有睡好覺<br>
@@ -129,7 +137,7 @@
 
             <div class="team_wr">
                 <h1>團隊介紹</h1>
-                <p data-aos="fade-left" data-aos-duration="2000">
+                <p data-aos="fade-up" data-aos-duration="2000">
                     團隊人數：12人<br>
                     
                     團隊理念：睏飽未秉持誠信、品質、高效的原則<br>
@@ -228,6 +236,20 @@
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
      <script>
         AOS.init();
+
+        //menu顯示子選單
+        let menu_btn = document.getElementById('menu-btn');
+        menu_btn.addEventListener('click', function(){
+            let products_menu = document.getElementsByClassName('products_menu')[0];
+            // let all_product = products_menu.querySelector('a');
+            products_menu.style.textAlign = 'center';
+
+            let span_el = document.getElementsByTagName('span');
+            for(let i = 0; i < span_el.length; i++){
+                span_el[i].style.display = 'inline-block';
+            }
+        });
+        
      </script>
 </body>
 </html>

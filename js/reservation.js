@@ -75,6 +75,21 @@ document.addEventListener('DOMContentLoaded',function(){
     });
     
 
+    //menu顯示子選單
+    let menu_btn = document.getElementById('menu-btn');
+    menu_btn.addEventListener('click', function(){
+        let products_menu = document.getElementsByClassName('products_menu')[0];
+        // let all_product = products_menu.querySelector('a');
+        products_menu.style.textAlign = 'center';
+
+        let span_el = document.getElementsByTagName('span');
+        for(let i = 0; i < span_el.length; i++){
+            span_el[i].style.display = 'inline-block';
+        }
+
+    });
+    
+
 
     // 預約按鈕, 點擊出現彈窗, 顯示使用者所選預約資料
     let lightbox_el = document.getElementById("lightbox"); 

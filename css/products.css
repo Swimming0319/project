@@ -167,6 +167,9 @@ main{
 .product_block ul li a:hover .cart{
     display: block;
 }
+.product_block ul li a:hover .cart:hover{
+    cursor: pointer;
+}
 
 
 /* product_block end */
@@ -192,4 +195,87 @@ main{
     border-bottom: 2px solid #E4B67A;
     border-bottom-color: #E4B67A;
     color: #E4B67A;
+}
+
+
+@media screen and (max-width: 428px){
+    .wrapper{
+        min-width: auto;
+    }
+
+    .bread_crumbs{
+        /* display: none; */
+        padding-top: 60px;
+        line-height: 35px;
+    }
+
+    .bread_crumbs h1{
+        display: none;
+    }
+
+    main{
+        max-width: 100%;
+    }
+
+    .left_block{
+        display: none;
+    }
+
+    .product_block ul{
+        padding: 0 5px;
+    }
+
+    /* 改兩欄式 */
+    .product_block ul li{
+        flex: 50%;
+        max-width: 50%;
+        padding: 0 8px;
+    }
+    
+
+
+    .product_block ul li img{
+        width: 100%;
+    }
+
+    .product_block ul li h3{
+        font-size: 14px;
+    }
+
+    .product_block ul li p{
+        color: #194448;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .page_number{
+        max-width: 100%;
+        font-size: 14px;
+        text-align: center;
+        padding-right: 0;     
+        padding-bottom: 50px;
+        padding-top: 30px;
+    }
+    .page_number a{
+        padding: 0 8px;
+    }
+    .page_number a:hover{
+        color: black;
+    }
+
+    /* 購物車按鈕 */
+    .product_block ul li a .cart{
+        display: block;
+        width: 150px;
+        position: static;
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .product_block ul li a:hover .cart{
+        /* display: none; */
+    }
+
+
 }

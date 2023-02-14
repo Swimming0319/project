@@ -107,10 +107,63 @@ main .text p{
     letter-spacing: 6px;
 }
 
-/* main .text:hover h3, main .text:hover p{
-    background-color: darkgray;
-    color: white;
-} */
-
 
 /* main_area end*/
+
+
+@media screen and (max-width: 428px){
+    .wrapper{
+        min-width: auto;
+    }
+
+    .title{
+        min-width: auto;
+        padding: 70px 0 50px;
+    }
+
+    .title h1{
+        font-size: 42px;
+    }
+
+    main{
+        max-width: 100%;
+    }
+
+    main ul{
+        flex-direction: column;
+        align-content: center;
+        padding: 0;
+        padding-bottom: 50px;
+    }
+
+    main ul li{
+        flex-basis: 100%;
+        padding-left: 0;
+    }
+
+    main ul li a{
+        width: 320px;
+    }
+
+    main ul li a img{
+        width: 100%;
+    }
+
+    main .date{
+        width: auto;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    main .text h3{
+        font-size: 18px;
+        padding-left: 20px;
+    }
+    
+    main .text p{
+        font-size: 16px;
+        padding-left: 20px;
+    }
+
+
+}

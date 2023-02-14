@@ -61,12 +61,7 @@ nav ul li{
     margin-right: 40px;
 }
 
-nav ul li:nth-child(5){
-    /* margin-right: 70px; */
-}
-nav ul li:nth-child(6){
-    /* margin-right: 30px; */
-}
+
 nav ul li:nth-child(7){
     margin-right: 70px;
 }
@@ -85,6 +80,58 @@ nav ul li a{
 nav ul li a:hover{
     color: #E4B67A;
 }
+
+/* --子選單--- */
+.products_menu ol{
+    position: absolute;
+    z-index: 10;
+    width: 100px;
+    background-color: #fff;
+  
+    display: none;
+}
+
+
+.products_menu ol li{
+    margin: 0;
+    padding: 0 10px;
+}
+
+.products_menu ol li:hover{
+    background-color: #194448;
+    color: white;
+}
+
+.products_menu ol li:hover a{
+    color: white;
+}
+
+.products_menu ol li a{
+    display: inline-block;
+    line-height: 50px;
+}
+
+.products_menu ol li a .fa-angle-right{
+    padding-left: 20px;
+} 
+
+/* RWD 子選單 css*/
+.menu li span{
+    display: none;
+    margin-bottom: 10px;
+}
+
+.menu li span a{
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+
+/* hover & show */
+.products_menu:hover ol{
+    display: block;
+}
+  
 
 /* header end */
 
@@ -245,6 +292,9 @@ footer .tibame a{
 
     /* header */
 
+    header{
+        min-width: auto;
+    }
 
     .header_wrap{
         min-width: auto;
@@ -352,7 +402,7 @@ footer .tibame a{
         left: 0; 
         /* 從左邊滑入 */
         z-index: 1;
-        transition: all .6s;
+        transition: all .3s;
         overflow: hidden;
     }
 
@@ -380,6 +430,36 @@ footer .tibame a{
         font-weight: 400;
     }
 
+
+    /* 所有商品的子選單取消出現 */
+    .products_menu:hover ol{
+        display: none;
+    }
+    .products_menu ol{
+        display: none;
+        /* background-color: transparent; */
+    }
+    .products_menu ol li{
+        display: none;
+    }
+    
+    .products_menu ol li:hover{
+        display: none;
+    }
+    
+    .products_menu ol li:hover a{
+        display: none;
+    }
+    
+    .products_menu ol li a{
+        display: none;
+    }
+    
+    .products_menu ol li a .fa-angle-right{
+        display: none;
+    } 
+    
+    
 
     /* contact */
     #contactbox article{

@@ -7,6 +7,17 @@ document.addEventListener('DOMContentLoaded',function(){
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
         },
+        slidesPerView: 3,
+        breakpoints: { 
+            320: {  //當螢幕寬度大於等於320
+              slidesPerView: 1,
+              spaceBetween: 10
+            },
+            1280: {  //當螢幕寬度大於等於1280
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+        }
     }) 
 
     //contact 彈窗
@@ -26,6 +37,22 @@ document.addEventListener('DOMContentLoaded',function(){
     // 點擊 contactbox 中的白色區域，不會關掉 modal
     contactbox_el.querySelector("article").addEventListener("click", function(e){
         e.stopPropagation();
+    });
+
+
+    
+    //menu顯示子選單
+    let menu_btn = document.getElementById('menu-btn');
+    menu_btn.addEventListener('click', function(){
+        let products_menu = document.getElementsByClassName('products_menu')[0];
+        // let all_product = products_menu.querySelector('a');
+        products_menu.style.textAlign = 'center';
+
+        let span_el = document.getElementsByTagName('span');
+        for(let i = 0; i < span_el.length; i++){
+            span_el[i].style.display = 'inline-block';
+        }
+
     });
 
 

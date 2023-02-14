@@ -39,6 +39,44 @@ document.addEventListener('DOMContentLoaded',function(){
     });
 
 
+    //menu顯示子選單
+    let products_menu = document.getElementsByClassName('products_menu')[0];
+    products_menu.style.textAlign = 'center';
+    let menu_btn = document.getElementById('menu-btn');
+    menu_btn.addEventListener('click', function(){
+        
+        let span_el = document.getElementsByTagName('span');
+        for(let i = 0; i < span_el.length; i++){
+            span_el[i].style.display = 'inline-block';
+        }
+
+    });
+
+    
+    //失敗 重複點及所有商品連結 a標籤印出來很怪?
+    // let all_product = document.getElementById('all_product');
+    // console.log(all_product);
+    // all_product.addEventListener('click', function(){
+    //     let cart = document.getElementsByClassName('cart');
+    //     console.log(cart);
+    //     for(let i = 0; i < cart.length; i++){
+    //         let str = '<i class="fa-solid fa-cart-shopping"></i>';
+    //         cart[i].innerHTML = str;
+    //     }
+
+    // });
+    
+    //假設點所有商品連結true
+
+    // if(all_product.click){
+    //     let cart = document.getElementsByClassName('cart');
+    //     console.log(cart);
+    //     for(let i = 0; i < cart.length; i++){
+    //         let str = '<i class="fa-solid fa-cart-shopping"></i>';
+    //         cart[i].innerHTML = str;
+    //     }
+    // }
+
 
 
 });

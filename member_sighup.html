@@ -40,8 +40,16 @@
                         <li>
                             <a href="news.html">最新消息</a>
                         </li>
-                        <li>
+                        <li class="products_menu">
                             <a href="products.html">所有商品</a>
+                            <ol>
+                                <li><a href="#">躺的<i class="fa-solid fa-angle-right"></i></a></li>
+                                <li><a href="#">穿的<i class="fa-solid fa-angle-right"></i></a></li>
+                                <li><a href="#">用的<i class="fa-solid fa-angle-right"></i></a></li>
+                            </ol>
+                            <span style="border-right: 1px solid #fff;"><a href="#">躺的</a></span> 
+                            <span style="border-right: 1px solid #fff;"><a href="#">穿的</a></span> 
+                            <span><a href="#">用的</a></span>
                         </li>
                         <li>
                             <a href="reservation.html">預約體驗</a>
@@ -173,6 +181,20 @@
         // 點擊 contactbox 中的白色區域，不會關掉 modal
         contactbox_el.querySelector("article").addEventListener("click", function(e){
             e.stopPropagation();
+        });
+
+        //menu顯示子選單
+        let menu_btn = document.getElementById('menu-btn');
+        menu_btn.addEventListener('click', function(){
+            let products_menu = document.getElementsByClassName('products_menu')[0];
+            // let all_product = products_menu.querySelector('a');
+            products_menu.style.textAlign = 'center';
+
+            let span_el = document.getElementsByTagName('span');
+            for(let i = 0; i < span_el.length; i++){
+                span_el[i].style.display = 'inline-block';
+            }
+
         });
 
     </script>
