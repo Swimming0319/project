@@ -34,7 +34,7 @@ header nav .now_page{
 .login_text{
     background-color: #fff;
     flex-basis: 500px;
-    padding: 100px 100px 80px;
+    padding: 90px 100px 80px;
     font-weight: 500;
 }
 .login_text h1{
@@ -67,7 +67,7 @@ header nav .now_page{
 
 .login_text button{
     width: 300px;
-    height: 30px;
+    line-height: 31px;
     border: none;
     background-color: #E4B67A;
     color: #fff;
@@ -112,4 +112,48 @@ header nav .now_page{
 }
 
 
+/*---------- 螢幕小於 428 時 ----------*/
+@media screen and (max-width: 428px){
+    .wrapper{
+        min-width: auto;
+    }
+
+    .login_wrapper{
+        max-width: 100%;
+        background-size: contain;
+        background-image: url('../img/member/bg_mb.png');
+    }
+
+    .login{
+        width: 90%;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .img{
+        display: none;
+    }
+
+    .login_text{
+        flex-basis: auto;
+        padding: 40px;
+    }
+
+    .login_text h1{
+        width: 48px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .login_text input{
+        width: 100%;
+    }
+
+    .login_text button{
+        width: 100%;
+    }
+
+
+
+}
 

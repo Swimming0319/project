@@ -31,12 +31,13 @@ header nav .now_page{
 .sighup_text{
     background-color: #fff;
     flex-basis: 500px;
-    padding: 100px 100px 80px;
+    padding: 90px 100px 80px;
     font-weight: 500;
 }
 
 .sighup_text h1{
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .sighup_text input{
@@ -50,7 +51,7 @@ header nav .now_page{
 
 .sighup_text button{
     width: 300px;
-    height: 30px;
+    height: 32px;
     border: none;
     background-color: #E4B67A;
     color: #fff;
@@ -81,10 +82,55 @@ header nav .now_page{
     z-index: 10;
     color: #fff;
     position: absolute;
-    top: 100px;
+    top: 90px;
     right: 140px;
 }
 
 .img img{
     display: block;
+}
+
+
+/*---------- 螢幕小於 428 時 ----------*/
+@media screen and (max-width: 428px){
+    .wrapper{
+        min-width: auto;
+    }
+
+    .sighup_wrapper{
+        max-width: 100%;
+        background-size: contain;
+        background-image: url('../img/member/bg_mb.png');
+    }
+
+    .sighup{
+        width: 90%;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .img{
+        display: none;
+    }
+
+    .sighup_text{
+        flex-basis: auto;
+        padding: 40px;
+    }
+
+    .sighup_text h1{
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .sighup_text input{
+        width: 100%;
+    }
+
+    .sighup_text button{
+        width: 100%;
+    }
+
+
+
 }

@@ -540,6 +540,8 @@ main{
  
     .cart_container .cart_btn{
         width: 100%;
+        font-size: 16px;
+        height: 35px;
     }
     .cart_container .cart_btn:hover{
         cursor: pointer;
@@ -602,5 +604,7 @@ main{
         width: 80%;
     }
 
+    /* 購物車彈窗 */
+    #cartbox article{}
 
 }

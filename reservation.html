@@ -81,10 +81,18 @@
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="img/reservation/banner.png" alt="">
+                        <picture>
+                            <source srcset="img/reservation/banner_mb.png" media="(max-width: 428px)">
+                            <img src="img/reservation/banner.png" alt="">
+                        </picture>
+                        <!-- <img src="img/reservation/banner.png" alt=""> -->
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/reservation/banner_2.png" alt="">
+                        <picture>
+                            <source srcset="img/reservation/banner_2_mb.png" media="(max-width: 428px)">
+                            <img src="img/reservation/banner_2.png" alt="">
+                        </picture>
+                        <!-- <img src="img/reservation/banner_2.png" alt=""> -->
                     </div>
                 </div>
             </div>
@@ -140,6 +148,8 @@
                     </div>
                     <button type="button" id="reservation" class="btn_mode">預 約 確 認</button>
                 </div>
+
+                <!-- 預約彈窗 -->
                 <div id="lightbox" class="none">
                     <article>
                       <h1>請確認您的預約資料是否正確?</h1>
@@ -161,6 +171,7 @@
             
 
             <!-- reservation_bar_taipei -->
+
             <div id="taipei" class="reservation_bar_taipei">
                 <img src="img/reservation/choose.png" alt="">
                 <p>預約體驗-台北  (尚未開放)</p>
@@ -168,6 +179,7 @@
                     <button type="button">選 擇</button>
                 </div>    
             </div>
+
             <!-- reservation_bar_taipei end -->
 
         </main>

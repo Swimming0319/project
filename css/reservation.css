@@ -337,9 +337,182 @@ main{
     border: none;
     background-color: #194448;
     color: white;
-    width: 50px;
-    line-height: 30px;
+    width: 120px;
+    line-height: 35px;
+    display: block;
+    margin: 20px auto 0;
+    letter-spacing: 2px;
 }
 
 
 /* main_area end */
+
+
+/*---------- 螢幕小於 428 時 ----------*/
+@media screen and (max-width: 428px){
+    .wrapper{
+        min-width: auto;
+    }
+
+    .banner img{
+        padding-top: 14%;
+    }
+
+    main{
+        max-width: 100%;
+    }
+
+    .reservation_bar{
+        width: 95%;
+    }
+
+    .reservation_bar img{
+        width: 25%;
+    }
+
+    .reservation_bar p{
+        font-size: 14px;
+        padding: 0;
+        flex-grow: 0;
+        font-weight: 500;
+        align-items: center;
+        display: flex;
+        padding: 5px;
+    }
+
+    .reservation_bar .button{
+        /* align-items: center; */
+        display: flex;
+        justify-content: end;
+    }
+
+    .reservation_bar .button button{   
+        width: 70px;
+        margin: 0;
+        height: 100%;
+        padding: 0 10px;
+        font-size: 14px;   
+    }
+
+    .choose_date_active{
+        text-align: center;
+        padding: 0;
+        padding-bottom: 30px;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .choose_date h1{
+        font-size: 16px;
+        position: static;
+        text-align: center;
+        width: 25%;
+        letter-spacing: 4px;
+    }
+
+    #datepicker{
+        width: auto;
+        margin-top: 40px;
+    }
+
+    .ui-widget.ui-widget-content{
+        width: auto;
+    }
+
+    .choose_time_active{
+        padding-left: 0;
+        /* flex-direction: column;
+        align-items: center; */
+        flex-wrap: wrap;
+        width: 95%;
+    }
+
+    .choose_time h1{
+        font-size: 16px;
+        width: 25%;
+        top: 12%;
+        left: 40%;
+        text-align: center;
+        letter-spacing: 4px;
+    }
+
+    .choose_time label{
+        flex: 44%;
+        margin-top: 20px;
+        /* padding: 0 8px; */
+        line-height: 40px;
+        letter-spacing: 8px;
+    }
+
+    .information_active{
+        width: 95%;
+        text-align: center;
+    }
+
+    .information h1{
+        font-size: 16px;
+        left: 37%;
+        width: 25%;
+        text-align: center;
+        letter-spacing: 4px;
+    }
+
+    .information .map iframe{
+        padding: 20px;
+        width: 100%;
+        float: none;
+    }
+
+    .information .map p{
+        line-height: 2.5;
+        text-align: left;
+        padding: 20px 20px;
+        font-size: 14px;
+    }
+
+    .information button{
+        margin: 30px auto;
+        line-height: 40px;
+        letter-spacing: 2px;
+    }
+
+    .reservation_bar_taipei{
+        width: 95%;
+    }
+
+    .reservation_bar_taipei img{
+        width: 25%;
+    }
+
+    .reservation_bar_taipei p{
+        font-size: 14px;
+        padding: 0;
+        flex-grow: 0;
+        font-weight: 500;
+        align-items: center;
+        display: flex;
+        padding: 5px;
+    }
+
+    .reservation_bar_taipei .button{
+        /* align-items: center; */
+        display: flex;
+        justify-content: end;
+    }
+
+    .reservation_bar_taipei .button button{
+        width: 70px;
+        margin: 0;
+        height: 100%;
+        padding: 0 10px;
+        font-size: 14px;
+    }
+
+    /* 預約彈窗 */
+    #lightbox article{
+        width: 80%;
+        max-width: 100%;
+    }
+
+
+}

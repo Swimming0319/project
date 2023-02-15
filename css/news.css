@@ -23,7 +23,7 @@ header nav .now_page{
 }
 
 .title h1{
-    font-size: 72px;
+    font-size: 64px;
     font-family: 'Lora', serif;
     color: #E4B67A;
     text-align: center;
@@ -122,7 +122,11 @@ main .text p{
     }
 
     .title h1{
-        font-size: 42px;
+        font-size: 40px;
+    }
+
+    .title h2{
+        font-size: 18px;
     }
 
     main{
