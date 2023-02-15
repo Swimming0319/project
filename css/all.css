@@ -108,7 +108,7 @@ nav ul li a:hover{
 
 .products_menu ol li a{
     display: inline-block;
-    line-height: 50px;
+    line-height: 45px;
 }
 
 .products_menu ol li a .fa-angle-right{
@@ -124,6 +124,13 @@ nav ul li a:hover{
 .menu li span a{
     line-height: 30px;
     padding: 0 10px;
+}
+
+
+/* RWD會員和購物車icon 先隱藏*/
+
+.rwd_icon{
+    display: none;
 }
 
 
@@ -305,11 +312,10 @@ footer .tibame a{
         left: 0;
         top: 0;
         z-index: 100;
-
         padding: 0;
-        /* justify-content: flex-start; */
-        /* justify-content: space-between; */
-        justify-content: end;
+        /* justify-content: end; */
+        /* justify-content: center; */
+        justify-content: space-evenly;
     }
 
     .logo_header{
@@ -319,14 +325,16 @@ footer .tibame a{
 
     .logo_header a img{
         height: 60px;
-        padding-right: 20px;
+        /* padding-right: 40px;
+        padding-left: 50px; */
+        padding-left: 80px;
     }
     
     nav ul li:nth-child(7){
         margin: 0 auto;
     }
     
-    /*選單線*/
+    /*選單按鈕*/
 
     .menu-icon{
         width: 60px;
@@ -397,13 +405,16 @@ footer .tibame a{
         width: 0px;
         height: 100vh;
         background: #194448;
-        padding-top: 60px;
+        
         position: fixed;
         left: 0; 
         /* 從左邊滑入 */
         z-index: 1;
         transition: all .3s;
         overflow: hidden;
+        padding-top: 60px;
+        /* nav下移 logo顯示*/
+        /* top: 60px; */
     }
 
     /*選單向外推*/
@@ -420,10 +431,7 @@ footer .tibame a{
         border-bottom: 0.1px solid rgb(137, 134, 134);
     }
 
-    .menu li:nth-child(6),
-    .menu li:nth-child(7){
-        border: none;
-    }
+    
 
     .menu li a{
         color: white;
@@ -458,8 +466,23 @@ footer .tibame a{
     .products_menu ol li a .fa-angle-right{
         display: none;
     } 
-    
-    
+
+    /* RWD會員和購物車icon*/
+
+    .rwd_icon{
+        display: flex;
+        align-items: center;
+    }
+    .rwd_icon a{
+        color: #000;
+    }
+
+    /* 原會員和購物車icon隱藏 */
+    .menu li:nth-child(6),
+    .menu li:nth-child(7){
+        display: none;
+    }
+
 
     /* contact */
     #contactbox article{

@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded',function(){
         }
     }) 
 
-    //contact 彈窗
+    //========== contact 彈窗 ===============
     let contactbox_el = document.getElementById("contactbox");
     let btn_modal = document.getElementsByClassName("btn_modal")[0];
     btn_modal.addEventListener("click", function(){
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
     
-    //menu顯示子選單
+    //============== menu顯示子選單 =================
     let menu_btn = document.getElementById('menu-btn');
     menu_btn.addEventListener('click', function(){
         let products_menu = document.getElementsByClassName('products_menu')[0];
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded',function(){
     });
 
 
-    //點擊圖片互換
+    //=========== 點擊圖片互換 ===============
     let pic_el = document.getElementsByClassName('change');
     let pic_main = document.getElementById('pic_main');
     for(let i = 0; i < pic_el.length; i++){
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded',function(){
     }
     
 
-    //限制欄位只能輸入數字 中文也不能
+    //====== 限制欄位只能輸入數字 中文也不能 =========
     let number_el = document.getElementById('number');
     number_el.addEventListener("keydown", function(e){
         // console.log(e.which);
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded',function(){
     // });
 
 
-    //數量按鈕新增減少 當鍵盤重輸數字也要增減
+    //======= 數量按鈕新增減少 當鍵盤重輸數字也要增減 ========
     let btn_plus = document.getElementById('btn_plus');
     btn_plus.addEventListener('click', function(){
         // console.log(number_el.value);
@@ -141,10 +141,11 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 
-    //加入購物車按鈕 點擊彈出數量
+    //=======加入購物車按鈕 點擊彈出數量==========
 
     let cart_btn = document.getElementById('cart_btn');
     let cart_qty = document.getElementsByClassName('cart_qty')[0];
+    let cart_qty_rwd = document.getElementsByClassName('cart_qty_rwd')[0];
     cart_btn.addEventListener('click', function(e){
         if(number_el.value == '' || number_el.value == 0){
             e.preventDefault(); //使用者沒打字或打0時 進入此區 停止表單預設資料送出行為
@@ -166,7 +167,7 @@ document.addEventListener('DOMContentLoaded',function(){
                 alert('請直接聯繫客服03-3333333，將由專員為您服務');
             }
 
-            //新增購物車共幾件商品 1 x NT$25,000 件數依照input標籤裡數字加上去
+            //===== 新增購物車共幾件商品 1 x NT$25,000 件數依照input標籤裡數字加上去 =====
             let amount_number = document.getElementById('amount_number');
             let value5 = parseInt(amount_number.innerHTML);
             // console.log(value5);
@@ -178,7 +179,7 @@ document.addEventListener('DOMContentLoaded',function(){
                 amount_number.innerHTML = 0;
             }
 
-            //彈窗 
+            //============ 彈窗 =====================
             let cartbox = document.getElementById('cartbox');
             if(value5 === 0){  //如果0件商品就不顯示彈窗 字串要轉數字
                 cartbox.classList.add("cart_none"); 
@@ -191,15 +192,10 @@ document.addEventListener('DOMContentLoaded',function(){
                 document.documentElement.style.overflowY = 'hidden';
                 document.documentElement.style.marginRight = m +'px';
 
-                
-                
-                //嘗試把內容再塞進去
-                // let check_cart = document.getElementsByClassName('check_cart')[0];
-                // let str = "";
-                // check_cart.insertAdjacentHTML("beforebegin", str);
+            
             }
 
-            //取消彈窗
+            //========= 取消彈窗 ============
             cartbox.addEventListener("click", function(){
                 //動畫彈走
                 cartbox.querySelector("article").classList.add('article_none');
@@ -216,7 +212,28 @@ document.addEventListener('DOMContentLoaded',function(){
                 e.stopPropagation();
             });
 
-            
+
+            //=======購物車圓圈數字 FOR RWD=============
+            // let cart_qty_rwd = document.getElementsByClassName('cart_qty_rwd')[0];
+            cart_qty_rwd.style.opacity = '1';
+            // innerHTML取得元素的內容
+            let value_cart_qty_rwd = parseInt(cart_qty_rwd.innerHTML);
+            // console.log(typeof(value3));
+            let value_number_el = parseInt(number_el.value);
+            // console.log(typeof(value4));
+            value_cart_qty_rwd += value_number_el;
+            //更改元素的內容為新計算的值
+            cart_qty_rwd.innerHTML = value_cart_qty_rwd;
+
+            if(value_cart_qty_rwd > 200){
+                cart_qty_rwd.style.opacity = '0';
+                cart_qty_rwd.innerHTML = 0;
+            }
+
+            //嘗試把內容再塞進去 在別頁點購物車加入清單用localstorage資料或cookie
+            // let check_cart = document.getElementsByClassName('check_cart')[0];
+            // let str = "";
+            // check_cart.insertAdjacentHTML("beforebegin", str);
         }
     });
 
@@ -224,8 +241,12 @@ document.addEventListener('DOMContentLoaded',function(){
     let trash_can = document.getElementsByClassName('fa-trash-can')[0];
     trash_can.addEventListener('click', function(){
         amount_number.innerHTML = 0;
+
         cart_qty.style.opacity = '0';
+        cart_qty_rwd.style.opacity = '0';
         cart_qty.innerHTML = 0;
+        cart_qty_rwd.innerHTML = 0;
+
         alert('你的購物車是空的'); //原先使用改元素內容 再次點擊購物車會沒有資料
         cartbox.classList.add("cart_none");
         //恢復頁面滾動

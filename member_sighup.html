@@ -70,6 +70,20 @@
                     </ul>
                 </nav>
                 <!-- nav end -->
+
+                <!-- 保留RWD用 -->
+                
+                <div class="rwd_icon">
+                    <a href="member_login.html">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </div>
+                <div class="rwd_icon">
+                    <a href="">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </div>
+                
             </div>
 
         </header>
@@ -84,8 +98,10 @@
                         <input type="text" id="name"><br>
                         <label for="mail">E-mail</label><br>
                         <input type="email" id="mail"><br>
+                        <div id="alert_block_em">此欄位必填</div>
                         <label for="password">Password</label><br>
                         <input type="password" id="password"><br>
+                        <div id="alert_block_pw">此欄位必填</div>
                         <button type="submit">Create account</button>
                     </form>
                     <h2>Already have an account?</h2>
@@ -162,42 +178,8 @@
     </div>
     <!-- wrapper end-->
     
-    <script>
-
-        //contact 彈窗
-        let contactbox_el = document.getElementById("contactbox");
-        let btn_modal = document.getElementsByClassName("btn_modal")[0];
-        btn_modal.addEventListener("click", function(){
-            contactbox_el.classList.remove("none");
-        });
-        let btn_modal_close = document.getElementsByClassName("btn_modal_close")[0];
-        btn_modal_close.addEventListener("click", function(){
-            confirm('發送成功');
-            contactbox_el.classList.add("none");
-        }); 
-        contactbox_el.addEventListener("click", function(){
-            this.classList.add("none");
-        });
-        // 點擊 contactbox 中的白色區域，不會關掉 modal
-        contactbox_el.querySelector("article").addEventListener("click", function(e){
-            e.stopPropagation();
-        });
-
-        //menu顯示子選單
-        let menu_btn = document.getElementById('menu-btn');
-        menu_btn.addEventListener('click', function(){
-            let products_menu = document.getElementsByClassName('products_menu')[0];
-            // let all_product = products_menu.querySelector('a');
-            products_menu.style.textAlign = 'center';
-
-            let span_el = document.getElementsByTagName('span');
-            for(let i = 0; i < span_el.length; i++){
-                span_el[i].style.display = 'inline-block';
-            }
-
-        });
-
-    </script>
+    <script src="js/is.min.js"></script>
+    <script src="js/member_sighup.js"></script>
 
     
 </body>

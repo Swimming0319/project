@@ -43,7 +43,8 @@ header nav .now_page{
 .sighup_text input{
     width: 300px;
     height: 30px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+    margin-bottom: 10px;
     outline: none;
     font-size: 16px;
     padding-left: 10px;
@@ -57,8 +58,9 @@ header nav .now_page{
     color: #fff;
     font-weight: 500;
     font-size: 16px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     letter-spacing: 1px;
+    margin: 10px 0;
 }
 
 .sighup_text button:hover{
@@ -89,6 +91,26 @@ header nav .now_page{
 .img img{
     display: block;
 }
+
+
+/* 表單驗證用 */
+
+.sighup_text .-on{
+    border: 1.6px solid #E4B67A;
+}
+
+.-error{
+    border: 1.6px solid rgba(231, 62, 62, 0.651);
+}
+
+#alert_block_em,
+#alert_block_pw{
+    display: none;
+    color: rgba(231, 62, 62, 0.651);
+    font-size: 14px;
+    font-weight: 400;
+}
+
 
 
 /*---------- 螢幕小於 428 時 ----------*/

@@ -34,7 +34,7 @@ header nav .now_page{
 .login_text{
     background-color: #fff;
     flex-basis: 500px;
-    padding: 90px 100px 80px;
+    padding: 82px 100px 80px;
     font-weight: 500;
 }
 .login_text h1{
@@ -47,23 +47,13 @@ header nav .now_page{
 .login_text input{
     width: 300px;
     height: 30px;
-    margin-bottom: 30px;
+    /* margin-bottom: 20px; */
+    margin-bottom: 10px;
     outline: none;
     font-size: 16px;
     padding-left: 10px;
 }
 
-/* .alert_block{
-    height: 30px;
-} */
-
-/* #password{
-    margin-bottom: 30px;
-} */
-
-.login_text .-on{
-    border: 1.6px solid #E4B67A;
-}
 
 .login_text button{
     width: 300px;
@@ -73,8 +63,9 @@ header nav .now_page{
     color: #fff;
     font-weight: 500;
     font-size: 16px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     letter-spacing: 1px;
+    margin: 10px 0;
 }
 
 .login_text button:hover{
@@ -107,8 +98,22 @@ header nav .now_page{
     width: 30px;
 }
 
+/* 表單驗證用 */
+
+.login_text .-on{
+    border: 1.6px solid #E4B67A;
+}
+
 .-error{
     border: 1.6px solid rgba(231, 62, 62, 0.651);
+}
+
+#alert_block_em,
+#alert_block_pw{
+    display: none;
+    color: rgba(231, 62, 62, 0.651);
+    font-size: 14px;
+    font-weight: 400;
 }
 
 
