@@ -34,13 +34,13 @@
                 <nav>
                     <ul class="menu">
                         <li>
-                            <a href="about_r1.html">關於我們</a>
+                            <a href="about_r1.html" class="counter">關於我們</a>
                         </li>
                         <li>
-                            <a href="news.html">最新消息</a>
+                            <a href="news.html" class="counter">最新消息</a>
                         </li>
                         <li class="products_menu">
-                            <a href="products.html" class="now_page" id="all_product">所有商品</a>
+                            <a href="products.html" class="now_page counter" id="all_product">所有商品</a>
                             <ol>
                                 <li><a href="#">躺的<i class="fa-solid fa-angle-right"></i></a></li>
                                 <li><a href="#">穿的<i class="fa-solid fa-angle-right"></i></a></li>
@@ -51,10 +51,10 @@
                             <span><a href="#">用的</a></span>
                         </li>
                         <li>
-                            <a href="reservation.html">預約體驗</a>
+                            <a href="reservation.html" class="counter">預約體驗</a>
                         </li>
                         <li>
-                            <a href="#" class="btn_modal">聯絡我們</a>
+                            <a href="#" class="btn_modal counter">聯絡我們</a>
                         </li>
                         <li>
                             <a href="member_login.html">
@@ -62,10 +62,32 @@
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="" class="cart_icon">
                                 <i class="fa-solid fa-cart-shopping"></i>
+                                <p class="cart_qty" id="cart_val"></p>
                             </a>
                         </li>
+
+                        <div id="cartbox" class="cart_none">
+                            <article>
+                                <form action="">
+                                    <div class="cart_add">
+                                        <img src="img/product_detail/left_1.jpg" alt="">
+                                        <div class="cart_text">
+                                            <h1>經典款好睏床墊</h1>
+                                            <h2>標準雙人 5 x 6.2尺</h2>
+                                            <p><span id="amount_number">0</span>  x NT$25,000</p>
+                                            <i class="fa-regular fa-trash-can"></i>
+                                        </div>
+                                    </div>                            
+
+                                    <!-- <div class="amount_qty">共 <span id="amount_number">0 </span>件商品</div> -->
+                                    <button type="button" class="check_cart"><a href="cart.html">查看購物車</a></button>
+                                </form>
+                            </article>
+                        </div>
+
+
                     </ul>
                 </nav>
                 <!-- nav end -->
@@ -78,8 +100,10 @@
                     </a>
                 </div>
                 <div class="rwd_icon">
-                    <a href="">
+                    <a href="#" class="cart_icon_rwd">
                         <i class="fa-solid fa-cart-shopping"></i>
+                        <!-- <div class="cart_qty_rwd">0</div> -->
+                        <p class="cart_qty_rwd" id="cart_val_rwd"></p>
                     </a>
                 </div>
 
@@ -146,72 +170,73 @@
                             <img src="img/products/1.png" alt="">
                             <h3>經典款好睏床墊</h3>
                             <p>NT$25,000</p>
-                            <button type="button" class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                         </a>
+                        <button type="button" class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        
                     </li>
                     <li>
                         <a href="product_detail.html">
                             <img src="img/products/2.png" alt="">
                             <h3>科技款好睏床墊</h3>
                             <p>NT$35,000</p>
-                            <button class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                         </a>
+                        <button type="button" class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                     </li>
                     <li>
                         <a href="product_detail.html">
                             <img src="img/products/3.png" alt="">
                             <h3>熱感好睏床墊</h3>
                             <p>NT$26,000</p>
-                            <button class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                         </a>
+                        <button type="button" class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                     </li>
                     <li>
                         <a href="product_detail.html">
                             <img src="img/products/4.png" alt="">
                             <h3>彈力款好睏床墊</h3>
                             <p>NT$27,000</p>
-                            <button class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                         </a>
+                        <button type="button" class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                     </li>
                     <li>
                         <a href="product_detail.html">
                             <img src="img/products/5.png" alt="">
                             <h3>涼款好睏床墊</h3>
                             <p>NT$27,000</p>
-                            <button class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                         </a>
+                        <button type="button" class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                     </li>
                     <li>
                         <a href="product_detail.html">
                             <img src="img/products/6.png" alt="">
                             <h3>好睏枕</h3>
                             <p>NT$1,200</p>
-                            <button class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                         </a>
+                        <button type="button" class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                     </li>
                     <li>
                         <a href="product_detail.html">
                             <img src="img/products/7.png" alt="">
                             <h3>睏衣(春秋款)</h3>
                             <p>NT$799</p>
-                            <button class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                         </a>
+                        <button type="button" class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                     </li>
                     <li>
                         <a href="product_detail.html">
                             <img src="img/products/8.png" alt="">
                             <h3>睏衣(冬款)</h3>
                             <p>NT$899</p>
-                            <button class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                         </a>
+                        <button type="button" class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                     </li>
                     <li>
                         <a href="product_detail.html">
                             <img src="img/products/9.png" alt="">
                             <h3>好睏擴香</h3>
                             <p>NT$599</p>
-                            <button class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                         </a>
+                        <button type="button" class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                     </li>
 
                     <li>
@@ -219,24 +244,24 @@
                             <img src="img/products/10.png" alt="">
                             <h3>輕薄款好睏床墊</h3>
                             <p>NT$20,000</p>
-                            <button class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                         </a>
+                        <button type="button" class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                     </li>
                     <li>
                         <a href="product_detail.html">
                             <img src="img/products/11.png" alt="">
                             <h3>豪華款好睏床墊</h3>
                             <p>NT$28,000</p>
-                            <button class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                         </a>
+                        <button type="button" class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                     </li>
                     <li>
                         <a href="product_detail.html">
                             <img src="img/products/12.png" alt="">
                             <h3>舒適款好睏床墊</h3>
                             <p>NT$23,000</p>
-                            <button class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                         </a>
+                        <button type="button" class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                     </li>
 
                 </ul>
@@ -313,7 +338,7 @@
 
     </div>
     <!-- wrapper end -->
-
+    
     <script src="js/products.js"></script>
 
 </body>

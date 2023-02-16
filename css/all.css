@@ -422,6 +422,9 @@ footer .tibame a{
         display: block;
         /* margin-left:70px; */
         padding: 0;
+
+        /* 偽元素加數字用 */
+        counter-reset: num;
     }
 
     .menu li {
@@ -429,14 +432,32 @@ footer .tibame a{
         width: calc(100% - 20px);    
         margin: 0 auto;
         border-bottom: 0.1px solid rgb(137, 134, 134);
+
+        /* 偽元素加數字用 */
+        position: relative;
     }
 
+    /* hover後線條變色寬度0~100% */
     
 
     .menu li a{
         color: white;
         font-weight: 400;
     }
+
+    /* 偽元素加數字 */
+    .menu .counter::before {
+        counter-increment: num;
+        content: "0" counter(num);
+        position: absolute;
+        left: 30%;
+        color: #E4B67A;
+        /* font-family: "Marcellus", serif; */
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 68.97px;
+    }
+
 
 
     /* 所有商品的子選單取消出現 */
@@ -482,6 +503,9 @@ footer .tibame a{
     .menu li:nth-child(7){
         display: none;
     }
+
+
+
 
 
     /* contact */

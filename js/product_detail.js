@@ -1,3 +1,31 @@
+function get_cartVal() {
+    const cart_val = document.querySelector('#cart_val')
+    const MemoryCart = localStorage.getItem('MemoryCart')
+    let cart_qty = document.getElementsByClassName('cart_qty')[0];
+    //FOR RWD
+    const cart_val_rwd = document.querySelector('#cart_val_rwd')
+    let cart_qty_rwd = document.getElementsByClassName('cart_qty_rwd')[0];
+    if(MemoryCart){
+        cart_val.textContent = MemoryCart;
+        cart_val_rwd.textContent = MemoryCart;
+        cart_qty.style.opacity = '1';
+        cart_qty_rwd.style.opacity = '1'; //RWD版
+
+        /* ======== 重整後點擊購物車按鈕要再顯示彈窗 ============ */
+        
+
+
+    }
+}
+
+get_cartVal();   
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded',function(){
     let mySwiper = new Swiper ('.swiper', {
         loop: true, // 循環模式選項
@@ -115,8 +143,6 @@ document.addEventListener('DOMContentLoaded',function(){
 
         //將input標籤裡資料型態轉數字
         let value1 = parseInt(number_el.value);
-        // console.log(value1);
-        // console.log(typeof(value1));
 
         //規定上限200, setAttribute後加屬性名和屬性值
         if(value1 <= 199){
@@ -141,7 +167,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 
-    //======= 加入購物車按鈕 點擊彈出數量 購物車圈圈數量顯示1 ==========
+    //======= 加入購物車按鈕, 點擊彈出數量, 購物車圈圈數量顯示1 ==========
 
     let cart_btn = document.getElementById('cart_btn');
     let cart_qty = document.getElementsByClassName('cart_qty')[0];
@@ -153,12 +179,20 @@ document.addEventListener('DOMContentLoaded',function(){
             alert('請輸入輸量');//提醒使用者輸入數量
         }else{
 
+            //===== 儲存購物車圈圈數量資料到localStorage =========
+            let cart_val = document.querySelector('#cart_val');            
+            cart_val.textContent = 1;
+            localStorage.setItem('MemoryCart', `1`)
+            
+                
             //====== 購物車圈圈顯示1 ============
             cart_qty.style.opacity = '1';
             cart_qty.innerHTML = 1;
             //=======購物車圈圈顯示1 FOR RWD=============
             cart_qty_rwd.style.opacity = '1';
             cart_qty_rwd.innerHTML = 1;
+            
+                
 
             // let value3 = parseInt(cart_qty.innerHTML);
             // let value4 = parseInt(number_el.value);
@@ -187,14 +221,19 @@ document.addEventListener('DOMContentLoaded',function(){
                 cart_qty_rwd.style.opacity = '0';
                 cart_qty_rwd.innerHTML = 0;
 
-                alert('請直接聯繫客服03-3333333，將由專員為您服務');
-                //彈窗不出現
+                //彈窗不出現 失敗
+                // let cartbox = document.getElementById('cartbox');
                 cartbox.classList.add("cart_none");
+
+                alert('請直接聯繫客服03-3333333，將由專員為您服務');
+
+                // 清除 localStorage 資料
+                localStorage.clear();
             }
 
             //============ 顯示彈窗 =====================
             let cartbox = document.getElementById('cartbox');
-            if(value5 === 0){  //如果0件商品就不顯示彈窗 字串要轉數字
+            if(value5 == 0){  //如果0件商品就不顯示彈窗 字串要轉數字
                 cartbox.classList.add("cart_none"); 
             }else{
                 cartbox.classList.remove('cart_none');
@@ -225,13 +264,57 @@ document.addEventListener('DOMContentLoaded',function(){
             });
 
 
+            
+
+
         }
     });
-
+  
 
     /* ======== 點擊購物車按鈕顯示彈窗 ==================== */
     let cart_icon = document.getElementsByClassName("cart_icon")[0];
     cart_icon.addEventListener("click",function(){
+
+            //============ 顯示彈窗 =====================
+            let amount_number = document.getElementById('amount_number');
+            let value5 = parseInt(amount_number.innerHTML);
+            let cartbox = document.getElementById('cartbox');
+            if(value5 === 0){  //如果0件商品就不顯示彈窗 字串要轉數字
+                cartbox.classList.add("cart_none"); 
+            }else{
+                cartbox.classList.remove('cart_none');
+                cartbox.querySelector("article").classList.remove('article_none');
+                //停止頁面滾動
+                let m = window.innerWidth - document.body.clientWidth;//滾動條的寬度
+                // console.log(m);
+                document.documentElement.style.overflowY = 'hidden';
+                document.documentElement.style.marginRight = m +'px';
+            }
+
+
+            //========= 取消彈窗 ============
+            cartbox.addEventListener("click", function(){
+                //動畫彈走
+                cartbox.querySelector("article").classList.add('article_none');
+                //cartbox none
+                cartbox.classList.add("cart_none");
+
+                //恢復頁面滾動
+                document.documentElement.style.overflowY = 'scroll';
+                document.documentElement.style.marginRight = '0px';
+                // console.log(m);
+            });
+            // 點擊 cartbox 中的白色區域，不會關掉 modal
+            cartbox.querySelector("article").addEventListener("click", function(e){
+                e.stopPropagation();
+            });
+
+
+    });
+
+    /* ======== 點擊購物車按鈕顯示彈窗 FOR RWD==================== */
+    let cart_icon_rwd = document.getElementsByClassName("cart_icon_rwd")[0];
+    cart_icon_rwd.addEventListener("click",function(){
 
             //============ 顯示彈窗 =====================
             let amount_number = document.getElementById('amount_number');
@@ -290,6 +373,10 @@ document.addEventListener('DOMContentLoaded',function(){
         document.documentElement.style.overflowY = 'scroll';
         document.documentElement.style.marginRight = '0px';
 
+
+        // 清除 localStorage 資料
+        localStorage.clear();
+
     });
  
 
@@ -297,3 +384,6 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 
             
+
+
+

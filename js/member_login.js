@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded',function(){
     });
     
 
-    // email和password input的focus 事件和 blur事件觸發
+    //======= email和password input的focus 事件和 blur事件觸發 =========
     let email_el = document.getElementById('mail');
     let password_el = document.getElementById('password');
     let alert_block_em = document.getElementById('alert_block_em');
@@ -64,10 +64,9 @@ document.addEventListener('DOMContentLoaded',function(){
     });
 
 
-
-    //表單驗證
+ 
+    //================= 表單驗證 ========================
     let the_form_el = document.getElementById('the_form');
-    // console.log(the_form_el);
 
     //submit (驗證成功才送出資料)
     the_form_el.addEventListener('submit',function(e){
@@ -78,7 +77,8 @@ document.addEventListener('DOMContentLoaded',function(){
         // let alert_block = document.getElementById('alert_block');
 
         let send_data = true;
-        //email驗證用套件 is js
+
+        //==== email驗證用套件 is js ======
         if( is.email(email_el.value) ){
             email_el.classList.remove('-error'); //通過拿掉紅框class屬性
             alert_block_em.style.display = 'none';
@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
             }
 
+        //====== 密碼驗證 ==========
         let strength = 0;
         let tips = "";
         let tips2 = "";

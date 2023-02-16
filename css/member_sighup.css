@@ -103,6 +103,7 @@ header nav .now_page{
     border: 1.6px solid rgba(231, 62, 62, 0.651);
 }
 
+#alert_block_nm,
 #alert_block_em,
 #alert_block_pw{
     display: none;

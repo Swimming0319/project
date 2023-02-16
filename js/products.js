@@ -1,3 +1,27 @@
+function get_cartVal() {
+    const cart_val = document.querySelector('#cart_val')
+    const MemoryCart = localStorage.getItem('MemoryCart')
+    let cart_qty = document.getElementsByClassName('cart_qty')[0];
+    //FOR RWD
+    const cart_val_rwd = document.querySelector('#cart_val_rwd')
+    let cart_qty_rwd = document.getElementsByClassName('cart_qty_rwd')[0];
+    if(MemoryCart){
+        cart_val.textContent = MemoryCart;
+        cart_val_rwd.textContent = MemoryCart;
+        cart_qty.style.opacity = '1';
+        cart_qty_rwd.style.opacity = '1'; //RWD版
+
+        /* ======== 重整後點擊購物車按鈕要再顯示彈窗 ============ */
+        
+
+
+    }
+}
+
+get_cartVal();   
+
+
+
 document.addEventListener('DOMContentLoaded',function(){
 
     //分類下拉選單&按鈕翻轉
