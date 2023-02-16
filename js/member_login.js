@@ -141,59 +141,37 @@ document.addEventListener('DOMContentLoaded',function(){
         //     send_data = false; 
         // }
 
+        // let user_icon = document.getElementsByClassName('fa-user');
+        // for(let i = 0; i < user_icon.length; i++){
+        //     if(user_icon[i].classList.contains('fa-user')){
+        //         user_icon[i].classList.remove('fa-user');
+        //         user_icon[i].classList.add('fa-user-check');
+        //         // <i class="fa-solid fa-user-check"></i>
+        //     }
+        // }
 
-        //參考資料
-        // function checkPasswordStrength(password_el) {
-        //     // Initialize variables
-        //     var strength = 0;
-        //     var tips = "";
-          
-        //     // Check password length
-        //     if (password_el.value.length < 8) {
-        //       tips += "Make the password longer. ";
-        //     } else {
-        //       strength += 1;
-        //     }
-          
-        //     // Check for mixed case
-        //     if (password_el.value.match(/[a-z]/) && password_el.value.match(/[A-Z]/)) {
-        //       strength += 1;
-        //     } else {
-        //       tips += "Use both lowercase and uppercase letters. ";
-        //     }
-          
-        //     // Check for numbers
-        //     if (password_el.value.match(/\d/)) {
-        //       strength += 1;
-        //     } else {
-        //       tips += "Include at least one number. ";
-        //     }
-          
-        //     // Check for special characters
-        //     if (password_el.value.match(/[^a-zA-Z\d]/)) {
-        //       strength += 1;
-        //     } else {
-        //       tips += "Include at least one special character. ";
-        //     }
-          
-        //     // Return results
-        //     if (strength < 2) {
-        //       return "Easy to guess. " + tips;
-        //     } else if (strength === 2) {
-        //       return "Medium difficulty. " + tips;
-        //     } else if (strength === 3) {
-        //       return "Difficult. " + tips;
-        //     } else {
-        //       return "Extremely difficult. " + tips;
-        //     }
-        //   }
 
         if(!send_data){  //!是反轉 這邊變false  如果資料是錯的進入大括號 資料不會送出 email和密碼驗證都過才送出
             e.preventDefault(); 
         }
 
+        // let user_icon = document.getElementsByClassName('user_icon');
+        //     for(let i = 0; i < user_icon.length; i++){
+        //         let str = '<i class="fa-solid fa-user-check"></i>';
+        //         user_icon[i].innerHTML = str;
+        //         // <i class="fa-solid fa-user-check"></i>
+        //     }
+        //     console.log(user_icon[0]);
+        
     });
-
+    
+    // let user_icon = document.getElementsByClassName('user_icon');
+    //     for(let i = 0; i < user_icon.length; i++){
+    //         let str = '<i class="fa-solid fa-user-check"></i>';
+    //         user_icon[i].innerHTML = str;
+    //         // <i class="fa-solid fa-user-check"></i>
+    //     }
+    //     console.log(user_icon[0]);
 
 
 

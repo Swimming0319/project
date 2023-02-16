@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded',function(){
                 spaceBetween: 30
             }
         }
-    }) 
+    }); 
 
     //========== contact 彈窗 ===============
     let contactbox_el = document.getElementById("contactbox");
@@ -141,45 +141,58 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 
-    //=======加入購物車按鈕 點擊彈出數量==========
+    //======= 加入購物車按鈕 點擊彈出數量 購物車圈圈數量顯示1 ==========
 
     let cart_btn = document.getElementById('cart_btn');
     let cart_qty = document.getElementsByClassName('cart_qty')[0];
     let cart_qty_rwd = document.getElementsByClassName('cart_qty_rwd')[0];
     cart_btn.addEventListener('click', function(e){
+            
         if(number_el.value == '' || number_el.value == 0){
             e.preventDefault(); //使用者沒打字或打0時 進入此區 停止表單預設資料送出行為
             alert('請輸入輸量');//提醒使用者輸入數量
         }else{
-            cart_qty.style.opacity = '1';
-            // innerHTML取得元素的內容
-            let value3 = parseInt(cart_qty.innerHTML);
-            // console.log(typeof(value3));
-            let value4 = parseInt(number_el.value);
-            // console.log(typeof(value4));
-            value3 += value4;
-            //更改元素的內容為新計算的值
-            cart_qty.innerHTML = value3;
 
-            if(value3 > 200){
-                cart_qty.style.opacity = '0';
-                cart_qty.innerHTML = 0;
-                alert('請直接聯繫客服03-3333333，將由專員為您服務');
-            }
+            //====== 購物車圈圈顯示1 ============
+            cart_qty.style.opacity = '1';
+            cart_qty.innerHTML = 1;
+            //=======購物車圈圈顯示1 FOR RWD=============
+            cart_qty_rwd.style.opacity = '1';
+            cart_qty_rwd.innerHTML = 1;
+
+            // let value3 = parseInt(cart_qty.innerHTML);
+            // let value4 = parseInt(number_el.value);
+            // value3 += value4;
+            //更改元素的內容為新計算的值
+            // cart_qty.innerHTML = value3;
+
+            // if(number_el.value > 200){
+            //     cart_qty.style.opacity = '0';
+            //     cart_qty.innerHTML = 0;
+            //     alert('請直接聯繫客服03-3333333，將由專員為您服務');
+            // }
 
             //===== 新增購物車共幾件商品 1 x NT$25,000 件數依照input標籤裡數字加上去 =====
             let amount_number = document.getElementById('amount_number');
             let value5 = parseInt(amount_number.innerHTML);
-            // console.log(value5);
-            // console.log(amount_number.innerHTML);
+            let value4 = parseInt(number_el.value);
             value5 += value4;
             amount_number.innerHTML = value5;
-            // console.log(value5);
             if(value5 > 200){
+                //購物車圈圈數量歸零並不顯示
                 amount_number.innerHTML = 0;
+                cart_qty.style.opacity = '0';
+                cart_qty.innerHTML = 0;
+                //購物車圈圈數量歸零並不顯示 FOR RWD 
+                cart_qty_rwd.style.opacity = '0';
+                cart_qty_rwd.innerHTML = 0;
+
+                alert('請直接聯繫客服03-3333333，將由專員為您服務');
+                //彈窗不出現
+                cartbox.classList.add("cart_none");
             }
 
-            //============ 彈窗 =====================
+            //============ 顯示彈窗 =====================
             let cartbox = document.getElementById('cartbox');
             if(value5 === 0){  //如果0件商品就不顯示彈窗 字串要轉數字
                 cartbox.classList.add("cart_none"); 
@@ -191,9 +204,51 @@ document.addEventListener('DOMContentLoaded',function(){
                 // console.log(m);
                 document.documentElement.style.overflowY = 'hidden';
                 document.documentElement.style.marginRight = m +'px';
-
-            
             }
+
+
+            //========= 取消彈窗 ============
+            cartbox.addEventListener("click", function(){
+                //動畫彈走 沒成功 和底下只能擇一
+                // cartbox.querySelector("article").classList.add('article_none');
+                //cartbox none
+                cartbox.classList.add("cart_none");
+
+                //恢復頁面滾動
+                document.documentElement.style.overflowY = 'scroll';
+                document.documentElement.style.marginRight = '0px';
+                // console.log(m);
+            });
+            // 點擊 cartbox 中的白色區域，不會關掉 modal
+            cartbox.querySelector("article").addEventListener("click", function(e){
+                e.stopPropagation();
+            });
+
+
+        }
+    });
+
+
+    /* ======== 點擊購物車按鈕顯示彈窗 ==================== */
+    let cart_icon = document.getElementsByClassName("cart_icon")[0];
+    cart_icon.addEventListener("click",function(){
+
+            //============ 顯示彈窗 =====================
+            let amount_number = document.getElementById('amount_number');
+            let value5 = parseInt(amount_number.innerHTML);
+            let cartbox = document.getElementById('cartbox');
+            if(value5 === 0){  //如果0件商品就不顯示彈窗 字串要轉數字
+                cartbox.classList.add("cart_none"); 
+            }else{
+                cartbox.classList.remove('cart_none');
+                cartbox.querySelector("article").classList.remove('article_none');
+                //停止頁面滾動
+                let m = window.innerWidth - document.body.clientWidth;//滾動條的寬度
+                // console.log(m);
+                document.documentElement.style.overflowY = 'hidden';
+                document.documentElement.style.marginRight = m +'px';
+            }
+
 
             //========= 取消彈窗 ============
             cartbox.addEventListener("click", function(){
@@ -213,29 +268,11 @@ document.addEventListener('DOMContentLoaded',function(){
             });
 
 
-            //=======購物車圓圈數字 FOR RWD=============
-            // let cart_qty_rwd = document.getElementsByClassName('cart_qty_rwd')[0];
-            cart_qty_rwd.style.opacity = '1';
-            // innerHTML取得元素的內容
-            let value_cart_qty_rwd = parseInt(cart_qty_rwd.innerHTML);
-            // console.log(typeof(value3));
-            let value_number_el = parseInt(number_el.value);
-            // console.log(typeof(value4));
-            value_cart_qty_rwd += value_number_el;
-            //更改元素的內容為新計算的值
-            cart_qty_rwd.innerHTML = value_cart_qty_rwd;
-
-            if(value_cart_qty_rwd > 200){
-                cart_qty_rwd.style.opacity = '0';
-                cart_qty_rwd.innerHTML = 0;
-            }
-
-            //嘗試把內容再塞進去 在別頁點購物車加入清單用localstorage資料或cookie
-            // let check_cart = document.getElementsByClassName('check_cart')[0];
-            // let str = "";
-            // check_cart.insertAdjacentHTML("beforebegin", str);
-        }
     });
+
+
+
+
 
     //垃圾桶刪減清單
     let trash_can = document.getElementsByClassName('fa-trash-can')[0];
@@ -258,3 +295,5 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 });
+
+            

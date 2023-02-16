@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
     // email和password input的focus 事件和 blur事件觸發
-    // email和password input的focus 事件和 blur事件觸發
     let email_el = document.getElementById('mail');
     let password_el = document.getElementById('password');
     let alert_block_em = document.getElementById('alert_block_em');
