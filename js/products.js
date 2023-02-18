@@ -10,15 +10,32 @@ function get_cartVal() {
         cart_val_rwd.textContent = MemoryCart;
         cart_qty.style.opacity = '1';
         cart_qty_rwd.style.opacity = '1'; //RWD版
-
-        /* ======== 重整後點擊購物車按鈕要再顯示彈窗 ============ */
         
-
 
     }
 }
 
 get_cartVal();   
+
+
+
+//會員icon更換
+function userIcon_change() {
+    const user_icon = document.querySelector('#user_icon')
+    const user_icon_rwd = document.querySelector('#user_icon_rwd')
+    const MemoryIcon = localStorage.getItem('MemoryIcon')
+    let str = '<i class="fa-solid fa-user-check"></i>';
+
+    user_icon.innerHTML = str;
+    user_icon_rwd.innerHTML = str;
+
+}
+if(localStorage.getItem('MemoryIcon') == '<i class="fa-solid fa-user-check"></i>'){ //假設localstorage裡資料 正確才呼叫
+userIcon_change();
+
+}
+
+
 
 
 
@@ -77,29 +94,7 @@ document.addEventListener('DOMContentLoaded',function(){
     });
 
     
-    //失敗 重複點及所有商品連結 a標籤印出來很怪?
-    // let all_product = document.getElementById('all_product');
-    // console.log(all_product);
-    // all_product.addEventListener('click', function(){
-    //     let cart = document.getElementsByClassName('cart');
-    //     console.log(cart);
-    //     for(let i = 0; i < cart.length; i++){
-    //         let str = '<i class="fa-solid fa-cart-shopping"></i>';
-    //         cart[i].innerHTML = str;
-    //     }
 
-    // });
-    
-    //假設點所有商品連結true
-
-    // if(all_product.click){
-    //     let cart = document.getElementsByClassName('cart');
-    //     console.log(cart);
-    //     for(let i = 0; i < cart.length; i++){
-    //         let str = '<i class="fa-solid fa-cart-shopping"></i>';
-    //         cart[i].innerHTML = str;
-    //     }
-    // }
 
 
 

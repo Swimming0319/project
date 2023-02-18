@@ -1,3 +1,21 @@
+//會員icon更換
+function userIcon_change() {
+    const user_icon = document.querySelector('#user_icon')
+    const user_icon_rwd = document.querySelector('#user_icon_rwd')
+    const MemoryIcon = localStorage.getItem('MemoryIcon')
+    let str = '<i class="fa-solid fa-user-check"></i>';
+
+    user_icon.innerHTML = str;
+    user_icon_rwd.innerHTML = str;
+
+}
+if(localStorage.getItem('MemoryIcon') == '<i class="fa-solid fa-user-check"></i>'){ //假設localstorage裡資料 正確才呼叫
+userIcon_change();
+
+}
+
+
+
 document.addEventListener('DOMContentLoaded',function(){
 
     //contact 彈窗

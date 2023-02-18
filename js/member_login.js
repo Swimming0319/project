@@ -1,3 +1,23 @@
+
+//會員icon更換
+function userIcon_change() {
+    const user_icon = document.querySelector('#user_icon')
+    const user_icon_rwd = document.querySelector('#user_icon_rwd')
+    const MemoryIcon = localStorage.getItem('MemoryIcon')
+    let str = '<i class="fa-solid fa-user-check"></i>';
+
+    user_icon.innerHTML = str;
+    user_icon_rwd.innerHTML = str;
+
+}
+if(localStorage.getItem('MemoryIcon') == '<i class="fa-solid fa-user-check"></i>'){ //假設localstorage裡資料 正確才呼叫
+userIcon_change();
+
+}
+
+
+
+
 document.addEventListener('DOMContentLoaded',function(){
 
     //menu顯示子選單
@@ -142,37 +162,25 @@ document.addEventListener('DOMContentLoaded',function(){
         //     send_data = false; 
         // }
 
-        // let user_icon = document.getElementsByClassName('fa-user');
-        // for(let i = 0; i < user_icon.length; i++){
-        //     if(user_icon[i].classList.contains('fa-user')){
-        //         user_icon[i].classList.remove('fa-user');
-        //         user_icon[i].classList.add('fa-user-check');
-        //         // <i class="fa-solid fa-user-check"></i>
-        //     }
-        // }
-
+       
 
         if(!send_data){  //!是反轉 這邊變false  如果資料是錯的進入大括號 資料不會送出 email和密碼驗證都過才送出
             e.preventDefault(); 
         }
 
-        // let user_icon = document.getElementsByClassName('user_icon');
-        //     for(let i = 0; i < user_icon.length; i++){
-        //         let str = '<i class="fa-solid fa-user-check"></i>';
-        //         user_icon[i].innerHTML = str;
-        //         // <i class="fa-solid fa-user-check"></i>
-        //     }
-        //     console.log(user_icon[0]);
+
         
+        const user_icon = document.querySelector('#user_icon')
+        const user_icon_rwd = document.querySelector('#user_icon_rwd')
+        const MemoryIcon = localStorage.getItem('MemoryIcon')
+        let str = '<i class="fa-solid fa-user-check"></i>';
+        user_icon.innerHTML = str;
+        user_icon_rwd.innerHTML = str;
+        localStorage.setItem('MemoryIcon', `<i class="fa-solid fa-user-check"></i>`)
+
+
     });
     
-    // let user_icon = document.getElementsByClassName('user_icon');
-    //     for(let i = 0; i < user_icon.length; i++){
-    //         let str = '<i class="fa-solid fa-user-check"></i>';
-    //         user_icon[i].innerHTML = str;
-    //         // <i class="fa-solid fa-user-check"></i>
-    //     }
-    //     console.log(user_icon[0]);
 
 
 

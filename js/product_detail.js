@@ -21,9 +21,21 @@ function get_cartVal() {
 get_cartVal();   
 
 
+//會員icon更換
+function userIcon_change() {
+    const user_icon = document.querySelector('#user_icon')
+    const user_icon_rwd = document.querySelector('#user_icon_rwd')
+    const MemoryIcon = localStorage.getItem('MemoryIcon')
+    let str = '<i class="fa-solid fa-user-check"></i>';
 
+    user_icon.innerHTML = str;
+    user_icon_rwd.innerHTML = str;
 
+}
+if(localStorage.getItem('MemoryIcon') == '<i class="fa-solid fa-user-check"></i>'){ //假設localstorage裡資料 正確才呼叫
+userIcon_change();
 
+}
 
 
 document.addEventListener('DOMContentLoaded',function(){
@@ -223,7 +235,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
                 //彈窗不出現 失敗
                 // let cartbox = document.getElementById('cartbox');
-                cartbox.classList.add("cart_none");
+                // cartbox.classList.add("cart_none");
 
                 alert('請直接聯繫客服03-3333333，將由專員為您服務');
 
