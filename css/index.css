@@ -611,7 +611,8 @@ html {
 
     .news_right{
         padding-top: 0;
-        margin: 0px 60px;
+        /* margin: 0px 60px; */
+        margin-left: 20%;
     }
     .news_area .newsimg .img_bottom{
         max-width: 100%;
@@ -682,8 +683,9 @@ html {
     }
 
     .arrow_button{
-        padding: 30px 10px 50px;
+        padding: 30px 0 50px;
         display: inline-block;
+        padding-left: 25%;
     }
 
     .arrow_button_next{
