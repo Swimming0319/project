@@ -163,16 +163,15 @@ document.addEventListener('DOMContentLoaded',function(){
     });
 
 
+    
     //日曆 顯示目前可選擇日期
-
-    $( function(){
-        $( "#datepicker" ).datepicker({ 
-            minDate: 0, 
-            maxDate: "+1M",
-            dayNamesMin: ['日','一','二','三','四','五','六'],
-            monthNames: ['1月','2月','3月','4月','5月','6月',
-            '7月','8月','9月','10月','11月','12月']
-        });
+    $( "#datepicker" ).datepicker({ 
+        minDate: 0, 
+        maxDate: "+1M",
+        dayNamesMin: ['日','一','二','三','四','五','六'],
+        monthNames: ['1月','2月','3月','4月','5月','6月',
+        '7月','8月','9月','10月','11月','12月']
     });
+    
 
  });
